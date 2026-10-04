@@ -67,7 +67,7 @@ export function toCsv(entries: LogEntry[], pages: LogPage[]): string {
   for (const p of Array.isArray(pages) ? pages : []) {
     if (!p || typeof p.id !== "string") continue;
     fileOf.set(p.id, text(p.fileName));
-    if (/sample/i.test(text(p.model))) samplePages.add(p.id);
+    if (/\bsample\b/i.test(text(p.model))) samplePages.add(p.id);
   }
   const cols = COLUMN_ORDER.filter((k) => entries.some((e) => cleanNumber(e.values?.[k]) !== null));
   const head = [

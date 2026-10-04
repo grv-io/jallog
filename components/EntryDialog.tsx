@@ -468,7 +468,7 @@ export function EntryDialog({
   const hasPhoto = pageId !== null && !fromSample;
   // A bundled sample page is generated data even when the live reader read it;
   // the capture screen records that in the page's "model".
-  const samplePage = page !== null && /sample/i.test(text(page.model));
+  const samplePage = page !== null && /\bsample\b/i.test(text(page.model));
   const uploadedAt = page ? text(page.uploadedAt) : "";
 
   // Every parameter the plant uses, plus whatever this entry itself carries.

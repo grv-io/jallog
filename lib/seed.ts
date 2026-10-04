@@ -304,7 +304,8 @@ const DAILY_SPAN = DAILY_ENTRIES + 1; // calendar days covered: one day has no e
 // The sample register page continues from these readings.
 const DAILY_END = { inletTotaliser: 18460, outletTotaliser: 17105, energyKwh: 91244 };
 // Chosen so that the days after the change average about 11 kWh, the rate the
-// sample register page (public/samples/page-4.jpg) carries on at.
+// sample register page (public/samples/page-4.jpg) starts at. From 27 Sep that
+// page's meter rises by exactly 3 on every row, which is its planted pattern.
 const NEW_METER_START = 90770;
 const D_METER_CHANGE = 2; // day index of the energy-meter replacement
 const D_MISSING = 8;
@@ -320,7 +321,9 @@ export function buildDailySeed(endDate: string): Seed {
 
   const plant: Plant = {
     id: "demo-daily",
-    name: "City Care Hospital STP",
+    // The name printed on the sample register page that continues this record
+    // (public/samples/page-4.jpg). Plainly invented, so it cannot be a real clinic's.
+    name: "Sample Clinic STP",
     kind: "STP",
     location: "Malviya Nagar, Jaipur",
     capacityKld: 10,

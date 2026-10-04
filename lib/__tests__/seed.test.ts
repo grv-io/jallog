@@ -273,7 +273,7 @@ describe("buildDailySeed (one-row-a-day meter-and-dosing register)", () => {
     const { plant } = buildDailySeed(DAILY_END);
     expect(plant).toEqual({
       id: "demo-daily",
-      name: "City Care Hospital STP",
+      name: "Sample Clinic STP",
       kind: "STP",
       location: "Malviya Nagar, Jaipur",
       capacityKld: 10,

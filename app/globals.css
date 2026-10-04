@@ -216,7 +216,12 @@ button, a, select, label { touch-action: manipulation; }
 .flag-link a { color: var(--accent); font-weight: 550; text-decoration: underline; text-underline-offset: 2px; }
 
 /* ---- tables ---- */
-.table-wrap { overflow-x: auto; border: 1px solid var(--hairline); border-radius: var(--radius); background: var(--surface); }
+/* position: relative makes the wrap the containing block of anything absolutely
+   positioned inside a cell (the screen-reader text of a flag mark). Without
+   it such an element escapes the wrap's clipping, counts towards the page's
+   width, and a phone lays the whole screen out twice as wide: the bottom
+   navigation leaves the screen and dialogs open off-centre. */
+.table-wrap { position: relative; overflow-x: auto; border: 1px solid var(--hairline); border-radius: var(--radius); background: var(--surface); }
 table.data { border-collapse: collapse; width: 100%; font-size: 13px; font-variant-numeric: tabular-nums; }
 table.data th {
   text-align: right; font-weight: 600; color: var(--ink-2); font-size: 12px; padding: 8px 8px; white-space: nowrap;

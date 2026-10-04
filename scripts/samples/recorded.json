@@ -1710,8 +1710,8 @@
   ],
   "unmappedColumns": [],
   "notes": [
-   "On 02/10/26 Shift B, DO Aeration value has a correction or strike-through, transcribed as 2.3 with low confidence.",
-   "On 05/10/26 Shift B, pH Outlet has a correction or strike-through, transcribed as 7.4 with low confidence."
+   "Reader: On 02/10/26 Shift B, DO Aeration value has a correction or strike-through, transcribed as 2.3 with low confidence.",
+   "Reader: On 05/10/26 Shift B, pH Outlet has a correction or strike-through, transcribed as 7.4 with low confidence."
   ]
  },
  "page-3.jpg": {
@@ -2092,8 +2092,524 @@
    "Sludge Wasted (L)"
   ],
   "notes": [
-   "The column 'Flow Meter Reading - Treated Water (m3/shift)' represents the volume of treated water discharged per shift, mapped to outletFlow.",
-   "The column 'Sludge Wasted (L)' is in Litres (volume) and does not map to sludgeKg (mass), so it is listed in unmappedColumns."
+   "Reader: The column 'Flow Meter Reading - Treated Water (m3/shift)' represents the volume of treated water discharged per shift, mapped to outletFlow.",
+   "Reader: The column 'Sludge Wasted (L)' is in Litres (volume) and does not map to sludgeKg (mass), so it is listed in unmappedColumns."
+  ]
+ },
+ "page-4.jpg": {
+  "model": "gemini-3.5-flash-lite",
+  "recordedOn": "2026-10-04",
+  "label": "Reading recorded on 4 Oct 2026 from gemini-3.5-flash-lite",
+  "rows": [
+   {
+    "date": "2026-09-21",
+    "shift": null,
+    "time": null,
+    "operator": "Sunil",
+    "values": {
+     "inletTotaliser": 18468,
+     "outletTotaliser": 17112,
+     "runHours": 6,
+     "limeKg": 0.5,
+     "alumKg": 1,
+     "chlorineKg": 0.05,
+     "energyKwh": 91255,
+     "sludgeKg": 2
+    },
+    "cellMeta": {
+     "inletTotaliser": {
+      "raw": "18468",
+      "confidence": "high"
+     },
+     "outletTotaliser": {
+      "raw": "17112",
+      "confidence": "high"
+     },
+     "runHours": {
+      "raw": "9 am - 3 pm",
+      "confidence": "high"
+     },
+     "limeKg": {
+      "raw": "500g",
+      "confidence": "low"
+     },
+     "alumKg": {
+      "raw": "1 kg",
+      "confidence": "high"
+     },
+     "chlorineKg": {
+      "raw": "50g",
+      "confidence": "low"
+     },
+     "energyKwh": {
+      "raw": "91255",
+      "confidence": "high"
+     },
+     "sludgeKg": {
+      "raw": "2 kg",
+      "confidence": "high"
+     }
+    },
+    "remarks": null
+   },
+   {
+    "date": "2026-09-22",
+    "shift": null,
+    "time": null,
+    "operator": "Sunil",
+    "values": {
+     "inletTotaliser": 18478,
+     "outletTotaliser": 17121,
+     "runHours": 6,
+     "energyKwh": 91264
+    },
+    "cellMeta": {
+     "inletTotaliser": {
+      "raw": "18478",
+      "confidence": "high"
+     },
+     "outletTotaliser": {
+      "raw": "17121",
+      "confidence": "high"
+     },
+     "runHours": {
+      "raw": "9 am - 3 pm",
+      "confidence": "high"
+     },
+     "energyKwh": {
+      "raw": "91264",
+      "confidence": "high"
+     }
+    },
+    "remarks": null
+   },
+   {
+    "date": "2026-09-23",
+    "shift": null,
+    "time": null,
+    "operator": "Sunil",
+    "values": {
+     "inletTotaliser": 18486,
+     "outletTotaliser": 17127,
+     "runHours": 6,
+     "energyKwh": 91277
+    },
+    "cellMeta": {
+     "inletTotaliser": {
+      "raw": "18486",
+      "confidence": "high"
+     },
+     "outletTotaliser": {
+      "raw": "17127",
+      "confidence": "high"
+     },
+     "runHours": {
+      "raw": "9 am - 3 pm",
+      "confidence": "high"
+     },
+     "energyKwh": {
+      "raw": "91277",
+      "confidence": "high"
+     }
+    },
+    "remarks": null
+   },
+   {
+    "date": "2026-09-24",
+    "shift": null,
+    "time": null,
+    "operator": "Sunil",
+    "values": {
+     "inletTotaliser": 18493,
+     "outletTotaliser": 17133,
+     "runHours": 6,
+     "limeKg": 0.5,
+     "alumKg": 1,
+     "chlorineKg": 0.05,
+     "energyKwh": 91287
+    },
+    "cellMeta": {
+     "inletTotaliser": {
+      "raw": "18493",
+      "confidence": "high"
+     },
+     "outletTotaliser": {
+      "raw": "17133",
+      "confidence": "high"
+     },
+     "runHours": {
+      "raw": "9 am - 3 pm",
+      "confidence": "high"
+     },
+     "limeKg": {
+      "raw": "500g",
+      "confidence": "low"
+     },
+     "alumKg": {
+      "raw": "1 kg",
+      "confidence": "high"
+     },
+     "chlorineKg": {
+      "raw": "50g",
+      "confidence": "low"
+     },
+     "energyKwh": {
+      "raw": "91287",
+      "confidence": "high"
+     }
+    },
+    "remarks": null
+   },
+   {
+    "date": "2026-09-25",
+    "shift": null,
+    "time": null,
+    "operator": "Sunil",
+    "values": {
+     "inletTotaliser": 18503,
+     "outletTotaliser": 18503,
+     "runHours": 7,
+     "energyKwh": 91300
+    },
+    "cellMeta": {
+     "inletTotaliser": {
+      "raw": "18503",
+      "confidence": "high"
+     },
+     "outletTotaliser": {
+      "raw": "18503",
+      "confidence": "high"
+     },
+     "runHours": {
+      "raw": "9 am - 4 pm",
+      "confidence": "high"
+     },
+     "energyKwh": {
+      "raw": "91300",
+      "confidence": "high"
+     }
+    },
+    "remarks": null
+   },
+   {
+    "date": "2026-09-26",
+    "shift": null,
+    "time": null,
+    "operator": "Sunil",
+    "values": {
+     "inletTotaliser": 18510,
+     "outletTotaliser": 18510,
+     "runHours": 6,
+     "energyKwh": 91313
+    },
+    "cellMeta": {
+     "inletTotaliser": {
+      "raw": "18510",
+      "confidence": "high"
+     },
+     "outletTotaliser": {
+      "raw": "18510",
+      "confidence": "high"
+     },
+     "runHours": {
+      "raw": "9 am - 3 pm",
+      "confidence": "high"
+     },
+     "energyKwh": {
+      "raw": "91313",
+      "confidence": "high"
+     }
+    },
+    "remarks": "pump serviced"
+   },
+   {
+    "date": "2026-09-27",
+    "shift": null,
+    "time": null,
+    "operator": "Sunil",
+    "values": {
+     "inletTotaliser": 18519,
+     "outletTotaliser": 18519,
+     "runHours": 6,
+     "energyKwh": 91316
+    },
+    "cellMeta": {
+     "inletTotaliser": {
+      "raw": "18519",
+      "confidence": "high"
+     },
+     "outletTotaliser": {
+      "raw": "18519",
+      "confidence": "high"
+     },
+     "runHours": {
+      "raw": "9 am - 3 pm",
+      "confidence": "high"
+     },
+     "energyKwh": {
+      "raw": "91316",
+      "confidence": "high"
+     }
+    },
+    "remarks": null
+   },
+   {
+    "date": "2026-09-28",
+    "shift": null,
+    "time": null,
+    "operator": "Sunil",
+    "values": {
+     "inletTotaliser": 18528,
+     "outletTotaliser": 18528,
+     "runHours": 6,
+     "limeKg": 1,
+     "alumKg": 1,
+     "chlorineKg": 0.05,
+     "energyKwh": 91319,
+     "sludgeKg": 2
+    },
+    "cellMeta": {
+     "inletTotaliser": {
+      "raw": "18528",
+      "confidence": "high"
+     },
+     "outletTotaliser": {
+      "raw": "18528",
+      "confidence": "high"
+     },
+     "runHours": {
+      "raw": "9 am - 3 pm",
+      "confidence": "high"
+     },
+     "limeKg": {
+      "raw": "1 kg",
+      "confidence": "high"
+     },
+     "alumKg": {
+      "raw": "1 kg",
+      "confidence": "high"
+     },
+     "chlorineKg": {
+      "raw": "50g",
+      "confidence": "low"
+     },
+     "energyKwh": {
+      "raw": "91319",
+      "confidence": "high"
+     },
+     "sludgeKg": {
+      "raw": "2 kg",
+      "confidence": "high"
+     }
+    },
+    "remarks": null
+   },
+   {
+    "date": "2026-09-29",
+    "shift": null,
+    "time": null,
+    "operator": "Sunil",
+    "values": {
+     "inletTotaliser": 18536,
+     "outletTotaliser": 18536,
+     "runHours": 6,
+     "energyKwh": 91322
+    },
+    "cellMeta": {
+     "inletTotaliser": {
+      "raw": "18536",
+      "confidence": "high"
+     },
+     "outletTotaliser": {
+      "raw": "18536",
+      "confidence": "high"
+     },
+     "runHours": {
+      "raw": "9 am - 3 pm",
+      "confidence": "high"
+     },
+     "energyKwh": {
+      "raw": "91322",
+      "confidence": "high"
+     }
+    },
+    "remarks": null
+   },
+   {
+    "date": "2026-09-30",
+    "shift": null,
+    "time": null,
+    "operator": "Sunil",
+    "values": {
+     "inletTotaliser": 18544,
+     "outletTotaliser": 18544,
+     "runHours": 6,
+     "energyKwh": 91325
+    },
+    "cellMeta": {
+     "inletTotaliser": {
+      "raw": "18544",
+      "confidence": "high"
+     },
+     "outletTotaliser": {
+      "raw": "18544",
+      "confidence": "high"
+     },
+     "runHours": {
+      "raw": "9 am - 3 pm",
+      "confidence": "high"
+     },
+     "energyKwh": {
+      "raw": "91325",
+      "confidence": "high"
+     }
+    },
+    "remarks": null
+   },
+   {
+    "date": "2026-10-01",
+    "shift": null,
+    "time": null,
+    "operator": "Sunil",
+    "values": {
+     "inletTotaliser": 18550,
+     "outletTotaliser": 18550,
+     "runHours": 7,
+     "limeKg": 0.5,
+     "alumKg": 1,
+     "chlorineKg": 0.05,
+     "energyKwh": 91328
+    },
+    "cellMeta": {
+     "inletTotaliser": {
+      "raw": "18550",
+      "confidence": "high"
+     },
+     "outletTotaliser": {
+      "raw": "18550",
+      "confidence": "high"
+     },
+     "runHours": {
+      "raw": "9 am - 4 pm",
+      "confidence": "high"
+     },
+     "limeKg": {
+      "raw": "500g",
+      "confidence": "low"
+     },
+     "alumKg": {
+      "raw": "1 kg",
+      "confidence": "high"
+     },
+     "chlorineKg": {
+      "raw": "50g",
+      "confidence": "low"
+     },
+     "energyKwh": {
+      "raw": "91328",
+      "confidence": "high"
+     }
+    },
+    "remarks": null
+   },
+   {
+    "date": "2026-10-02",
+    "shift": null,
+    "time": null,
+    "operator": "Sunil",
+    "values": {
+     "inletTotaliser": 18557,
+     "outletTotaliser": 18557,
+     "runHours": 6,
+     "energyKwh": 91331
+    },
+    "cellMeta": {
+     "inletTotaliser": {
+      "raw": "18557",
+      "confidence": "high"
+     },
+     "outletTotaliser": {
+      "raw": "18557",
+      "confidence": "high"
+     },
+     "runHours": {
+      "raw": "9 am - 3 pm",
+      "confidence": "high"
+     },
+     "energyKwh": {
+      "raw": "91331",
+      "confidence": "high"
+     }
+    },
+    "remarks": null
+   },
+   {
+    "date": "2026-10-03",
+    "shift": null,
+    "time": null,
+    "operator": "Sunil",
+    "values": {
+     "inletTotaliser": 18566,
+     "outletTotaliser": 18566,
+     "runHours": 6,
+     "energyKwh": 91334
+    },
+    "cellMeta": {
+     "inletTotaliser": {
+      "raw": "18566",
+      "confidence": "high"
+     },
+     "outletTotaliser": {
+      "raw": "18566",
+      "confidence": "high"
+     },
+     "runHours": {
+      "raw": "9 am - 3 pm",
+      "confidence": "high"
+     },
+     "energyKwh": {
+      "raw": "91334",
+      "confidence": "high"
+     }
+    },
+    "remarks": null
+   },
+   {
+    "date": "2026-10-04",
+    "shift": null,
+    "time": null,
+    "operator": "Sunil",
+    "values": {
+     "inletTotaliser": 18576,
+     "outletTotaliser": 18576,
+     "runHours": 6,
+     "energyKwh": 91337
+    },
+    "cellMeta": {
+     "inletTotaliser": {
+      "raw": "18576",
+      "confidence": "high"
+     },
+     "outletTotaliser": {
+      "raw": "18576",
+      "confidence": "high"
+     },
+     "runHours": {
+      "raw": "9 am - 3 pm",
+      "confidence": "high"
+     },
+     "energyKwh": {
+      "raw": "91337",
+      "confidence": "high"
+     }
+    },
+    "remarks": null
+   }
+  ],
+  "unmappedColumns": [],
+  "notes": [
+   "Reader: The page carries generated sample page text at the bottom.",
+   "Reader: Dosing units with 'g' have low confidence due to potential confusion with digit '9'."
   ]
  }
 }

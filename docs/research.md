@@ -102,3 +102,17 @@ Schema takeaway: flow-meter and kWh readings, chemical quantity, running hours, 
 - Count of industries with ETPs under consent ("2.5 lakh industries need consent" appeared only in an unfetched summary); number of apartment STPs in Jaipur/Rajasthan.
 - Whether a logbook condition appears in RSPCB apartment/hospital consents (only an industrial consent confirmed).
 - Which board owns the chocmms.nic.in format (assumed Chhattisgarh).
+
+## Corrections and additions (4 Oct 2026, evening)
+
+Appended after the build. The sections above are left as written; where a line below differs from one above, the line below is the current one.
+
+- **To 3a, "Reading accuracy on two pages".** The figure stands: 166 of 167 scored cells correct, one misread returned as sure (the last digit of an energy meter reading), 20 cells unscored. More detail than was given above:
+  - It comes from two runs at about 16:00 on 4 Oct 2026, both answered by `gemini-3.5-flash`, with the same score. The reader marked 43 of the 167 cells unsure, all of them correct.
+  - An earlier run the same afternoon, before a prompt change and answered by fallback models, scored 154 of 167. All 13 errors were in one dosing column where a handwritten "g" after the number was read as a 9; each was marked unsure.
+  - "The person writing down the true values" should read: the true values are a by-eye transcription of the scans made during the build with the AI coding tool. No second person checked it, and it was not compared with the plant's own records.
+  - These runs were made before the last round of edits to the extraction code. No later run on the real pages is recorded.
+- **To 3a, "What the rule engine raises".** Run with the current rules on each transcribed page on its own: the first page raises one medium flag (inlet and outlet meter readings equal on 14 of 14 rows); the second raises one medium flag (all 16 energy meter readings end in 0 or 5). On the first page the energy meter rises by exactly 3 on 10 of 13 days, the last six in a row; the identical-steps rule does not fire on that page alone, because six equal rises are not unlikely enough on a 14-row record. On the second page the energy meter rises only by 5 or 10.
+- **To 1d.** The README used to say that nobody reads a paper register until an inspection. That was not sourced (this file says no source was found on how often logbooks are reviewed). The README now states it as a working assumption.
+- **Reading accuracy on the generated sample pages, deployed site.** After the first public push, the four generated pages were read on the deployed site at 404 of 412 written cells (98.1%): nothing invented, nothing wrong returned as sure. The 8 misses were one flow column on sample page 3 that a lighter fallback model left unmapped while the main model was busy. Pages took 11 to 38 seconds. The one answer per page kept in `scripts/samples/recorded.json` scores 412 of 412 against `public/samples/truth.json`; those are kept answers, not an average.
+- **Still not done:** no visit to a plant and no interview with an operator. The checklist for one is in `docs/SUBMISSION.md`.

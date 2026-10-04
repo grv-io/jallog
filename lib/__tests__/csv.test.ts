@@ -55,6 +55,22 @@ describe("CSV export (app/log/csv.ts)", () => {
     expect(lines[3]).toBe(",,,,,,,,,typed by hand,,");
     expect(m.toCsv([], [])).toBe("date,shift,time,operator,remarks,source,changed_by_person,digitised_at");
   });
+  it("says so when an entry came from a bundled sample page, whoever read it", () => {
+    const rows = [
+      entry({ id: "live", pageId: "pg-live" }),
+      entry({ id: "rec", date: "2026-09-13", pageId: "pg-rec" }),
+      entry({ id: "real", date: "2026-09-14", pageId: "pg-real" }),
+      entry({ id: "seed", date: "2026-09-15", pageId: "seed" }),
+    ];
+    const pages = [
+      { id: "pg-live", fileName: "page-1.jpg", model: "gemini-3.5-flash (sample page)" },
+      { id: "pg-rec", fileName: "", model: "gemini-3.5-flash (recorded sample reading)" },
+      { id: "pg-real", fileName: "resample-tank.jpg", model: "gemini-3.5-flash" },
+      { id: 7, fileName: "x", model: "sample" },
+    ];
+    const sources = m.toCsv(rows, pages as never).split("\r\n").slice(1).map((l: string) => l.split(",").at(-3));
+    expect(sources).toEqual(["generated sample page (page-1.jpg)", "generated sample page", "resample-tank.jpg", "generated sample"]);
+  });
   it("gives a safe file name for any plant name", () => {
     expect(m.csvFileName("Green Valley STP", "2026-10-04")).toBe("green-valley-stp-log-2026-10-04.csv");
     expect(m.csvFileName("", "2026-10-04")).toBe("plant-log-2026-10-04.csv");

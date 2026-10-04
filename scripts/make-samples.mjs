@@ -1,6 +1,8 @@
 // Pages 1-3 are three-shift lab-style sheets (plant "shift"); page 4 is a one-row-a-day meter register (plant "daily").
 // Regenerates public/samples/page-{1,2,3,4}.jpg and public/samples/truth.json.
 // Run:  node scripts/make-samples.mjs
+//       node scripts/make-samples.mjs --truth-only   rewrites truth.json only (titles, descriptions, true values,
+//         recorded readings) and leaves the images alone; needs no browser. Use it after record-reading.mjs.
 // Needs puppeteer-core (NOT in this project's package.json) and Edge/Chrome installed, plus network for Google Fonts.
 //   Set TOOLS_DIR to a folder where `npm i puppeteer-core` was run (default: this project folder),
 //   and optionally BROWSER_PATH to msedge.exe / chrome.exe.
@@ -16,7 +18,8 @@ const OUT = path.resolve(here, "..", "public", "samples");
 // Defaults to this project, for anyone who has run `npm i --no-save puppeteer-core` here.
 const TOOLS_DIR = process.env.TOOLS_DIR || path.resolve(here, "..");
 const require = createRequire(path.join(TOOLS_DIR, "x.js"));
-const puppeteer = require("puppeteer-core");
+const TRUTH_ONLY = process.argv.includes("--truth-only");
+const puppeteer = TRUTH_ONLY ? null : require("puppeteer-core");
 const BROWSER =
   process.env.BROWSER_PATH ||
   [
@@ -155,7 +158,7 @@ function page2() {
   rows[7].remark = "sludge zyada tha";
   return {
     file: "page-2.jpg", title: "Messy 3-shift STP page",
-    description: "The same form, 2 to 5 Oct 2026. Two struck-through corrections, four blank cells, a night shift identical to the row before, one outlet TSS of 142, remarks in Hindi and Hinglish, a skewed photo and a coffee-ring stain.",
+    description: "The same form, 2 to 5 Oct 2026. Two struck-through corrections, four blank cells, a night shift identical to the row before, one outlet TSS of 142, remarks in Hindi and Hinglish, a skewed photo and a coffee-ring stain. The last three rows are dated 5 Oct 2026: saved before that day, they are flagged as dated after the page was photographed.",
     plant: "Aravali Residency STP", cap: "250 KLD", month: "October 2026", cols: STP_COLS, rows,
     vp: [1600, 1200], rowH: 56, sheetW: 1480, rot: 2.6, rx: 3.0, ry: 2.2, dark: 0.4, seed: 22, dateMode: "first", stain: { x: 1180, y: 18, s: 190 }, kind: "stp",
   };
@@ -456,11 +459,30 @@ function truthRow(P, r) {
 // ---------- main ----------
 fs.mkdirSync(OUT, { recursive: true });
 const pages = [page1(), page2(), page3(), page4()];
-const browser = await puppeteer.launch({ executablePath: BROWSER, headless: true, args: ["--no-sandbox", "--hide-scrollbars"] });
+const browser = TRUTH_ONLY ? null : await puppeteer.launch({ executablePath: BROWSER, headless: true, args: ["--no-sandbox", "--hide-scrollbars"] });
 const truth = { pages: [] };
 const recFile = path.join(here, "samples", "recorded.json");
 const recorded = fs.existsSync(recFile) ? JSON.parse(fs.readFileSync(recFile, "utf8")) : {};
 for (const P of pages) {
+  if (!TRUTH_ONLY) await render(P);
+  // "rows" is what is written on the page (the truth, used for scoring). "recorded" is one real answer
+  // from the reader, kept so the review can show unsure cells and notes without a live call. It is only
+  // kept for a page whose image has not changed since: see scripts/samples/record-reading.mjs.
+  // "plantName" is the name printed in the page header; the capture screen asks before saving a page
+  // into a sample plant with another name.
+  const entry = {
+    file: P.file, title: P.title, description: P.description, plantKind: "STP", fallbackDate: P.rows[0].date,
+    rows: P.rows.map((r) => (P.custom ? truthRow4(r) : truthRow(P, r))), plant: P.custom ? "daily" : "shift",
+    plantName: P.plant.replace(/\s*\(.*\)$/, ""),
+  };
+  if (recorded[P.file]) entry.recorded = recorded[P.file];
+  truth.pages.push(entry);
+}
+if (browser) await browser.close();
+fs.writeFileSync(path.join(OUT, "truth.json"), JSON.stringify(truth, null, 2));
+console.log(TRUTH_ONLY ? "truth.json rewritten; images left as they were" : "done");
+
+async function render(P) {
   const html = P.custom ? buildHtml4(P) : buildHtml(P);
   fs.writeFileSync(path.join(OUT, "_debug-" + P.file.replace(".jpg", ".html")), html);
   const pg = await browser.newPage();
@@ -480,13 +502,4 @@ for (const P of pages) {
   await pg.screenshot({ path: path.join(OUT, P.file), type: "jpeg", quality: 80 });
   await pg.close();
   fs.unlinkSync(path.join(OUT, "_debug-" + P.file.replace(".jpg", ".html")));
-  // "rows" is what is written on the page (the truth, used for scoring). "recorded" is one real answer
-  // from the reader, kept so the review can show unsure cells and notes without a live call. It is only
-  // kept for a page whose image has not changed since: see scripts/samples/record-reading.mjs.
-  const entry = { file: P.file, title: P.title, description: P.description, plantKind: "STP", fallbackDate: P.rows[0].date, rows: P.rows.map((r) => (P.custom ? truthRow4(r) : truthRow(P, r))), plant: P.custom ? "daily" : "shift" };
-  if (recorded[P.file]) entry.recorded = recorded[P.file];
-  truth.pages.push(entry);
 }
-await browser.close();
-fs.writeFileSync(path.join(OUT, "truth.json"), JSON.stringify(truth, null, 2));
-console.log("done");
