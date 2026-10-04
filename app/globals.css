@@ -1,42 +1,428 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: light;
+  --plane: #f6f6f3;
+  --surface: #fcfcfb;
+  --ink: #0b0b0b;
+  --ink-2: #52514e;
+  /* Secondary text. 4.9:1 on --wash, 5.2:1 on --plane, 5.5:1 on --surface. */
+  --muted: #686762;
+  --hairline: #e1e0d9;
+  /* Chart axes and table rules only. Too faint for the edge of a control. */
+  --axis: #c3c2b7;
+  /* Borders of inputs and buttons: 3.7:1 on --surface, so an empty field has a visible edge. */
+  --control: #85847c;
+  --wash: #f0efec;
+  --accent: #0e5a6b;
+  --accent-ink: #ffffff;
+  --accent-wash: #e4f0f2;
+  --series: #2a78d6;
+  --good: #0ca30c;
+  --good-text: #006300;
+  --warning: #fab219;
+  --warning-wash: #fdf3d7;
+  --warning-text: #7a5200;
+  --critical: #d03b3b;
+  --critical-wash: #fbe9e9;
+  --critical-text: #a32222;
+  --radius: 10px;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+/* Keep a focused field clear of the sticky header (and, on phones, the bottom nav). */
+html { scroll-padding-top: 66px; }
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--plane);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.45;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
+a { color: inherit; text-decoration: none; }
+h1, h2, h3, p { margin: 0; }
+h1, .h1 { font-size: 22px; font-weight: 650; letter-spacing: -0.01em; }
+h2 { font-size: 16px; font-weight: 650; }
+h3 { font-size: 14px; font-weight: 650; }
+button, input, select, textarea { font: inherit; color: inherit; }
+button, a, select, label { touch-action: manipulation; }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+/* ---- keyboard and screen-reader helpers ---- */
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.sr-only {
+  position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; border: 0;
+  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap;
 }
-
-a {
-  color: inherit;
-  text-decoration: none;
+.skip {
+  position: absolute; left: 8px; top: -80px; z-index: 50;
+  background: var(--accent); color: var(--accent-ink); padding: 9px 14px; border-radius: 8px; font-weight: 600; font-size: 14px;
 }
+.skip:focus { top: 8px; }
+/* <main> takes focus from the skip link; it should not draw a ring round the whole page. */
+.main:focus, .main:focus-visible { outline: none; }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+/* ---- shell ---- */
+.topbar {
+  position: sticky; top: 0; z-index: 20;
+  background: var(--surface);
+  border-bottom: 1px solid var(--hairline);
+}
+.topbar-in {
+  max-width: 1120px; margin: 0 auto; padding: 0 16px;
+  display: flex; align-items: center; gap: 20px; height: 54px;
+}
+.brand { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 17px; letter-spacing: -0.01em; }
+.brand svg { display: block; }
+.plant-chip { margin-left: auto; font-size: 13px; color: var(--ink-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 46vw; }
+.nav { display: flex; gap: 2px; }
+.nav a {
+  padding: 7px 11px; border-radius: 7px; font-size: 14px; color: var(--ink-2); font-weight: 500;
+  display: flex; align-items: center; gap: 6px;
+}
+.nav a:hover { background: var(--wash); }
+.nav a[aria-current="page"] { background: var(--accent-wash); color: var(--accent); }
+.nav .count {
+  font-size: 11px; font-weight: 650; min-width: 18px; height: 18px; padding: 0 5px; border-radius: 9px;
+  background: var(--critical); color: #fff; display: inline-flex; align-items: center; justify-content: center;
+}
+.main { max-width: 1120px; margin: 0 auto; padding: 22px 16px 96px; }
+
+/* Storage and recovery messages, under the header on every screen. */
+.banner { border-bottom: 1px solid var(--hairline); font-size: 13.5px; }
+.banner.bad { background: var(--critical-wash); color: var(--critical-text); }
+.banner.warn { background: var(--warning-wash); color: var(--warning-text); }
+.banner-in { max-width: 1120px; margin: 0 auto; padding: 10px 16px; display: flex; align-items: center; gap: 10px 16px; flex-wrap: wrap; }
+.banner-in > p { flex: 1 1 320px; }
+.banner .btn { color: var(--ink); }
+.page-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 18px; }
+.page-head p { color: var(--ink-2); margin-top: 3px; max-width: 64ch; }
+
+@media (max-width: 760px) {
+  .nav {
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 20;
+    background: var(--surface); border-top: 1px solid var(--hairline);
+    justify-content: space-around; padding: 6px 4px calc(6px + env(safe-area-inset-bottom));
   }
+  /* Six items must fit a 320 px phone: share the width equally. */
+  .nav a { flex: 1 1 0; min-width: 0; flex-direction: column; gap: 1px; font-size: 11px; padding: 6px 2px; position: relative; }
+  .nav .count { position: absolute; top: 0; right: calc(50% - 22px); }
+  /* The fixed nav is about 62 px tall plus the phone's home-indicator inset.
+     Leave that much room so the last table row and the last button stay reachable. */
+  .main { padding-bottom: calc(96px + env(safe-area-inset-bottom)); }
+  html { scroll-padding-bottom: calc(80px + env(safe-area-inset-bottom)); }
+  .plant-chip { max-width: 60vw; }
+  /* Long button labels wrap on a phone instead of pushing the page sideways. */
+  .btn { white-space: normal; height: auto; min-height: 38px; padding-top: 6px; padding-bottom: 6px; line-height: 1.25; }
+  .btn.sm { min-height: 30px; padding-top: 4px; padding-bottom: 4px; }
+}
+@media (min-width: 761px) { .nav a .ico { display: none; } }
+
+/* ---- primitives ---- */
+.card { background: var(--surface); border: 1px solid var(--hairline); border-radius: var(--radius); padding: 16px; }
+.card + .card { margin-top: 14px; }
+.card-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; margin-bottom: 12px; }
+.card-head .sub { color: var(--muted); font-size: 13px; }
+.grid { display: grid; gap: 14px; }
+.grid.kpis { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.grid > .card { margin-top: 0; }
+@media (max-width: 900px) { .grid.three { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 760px) {
+  .grid.kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .grid.two, .grid.three { grid-template-columns: minmax(0, 1fr); }
+}
+.stack { display: flex; flex-direction: column; gap: 14px; }
+.row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.muted { color: var(--muted); }
+.small { font-size: 13px; }
+.spacer { flex: 1; }
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 7px;
+  height: 38px; padding: 0 14px; border-radius: 8px; border: 1px solid var(--control);
+  background: var(--surface); font-weight: 550; font-size: 14px; cursor: pointer; white-space: nowrap;
+}
+.btn:hover { background: var(--wash); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.btn.primary:hover { background: #0b4a58; }
+.btn.danger { color: var(--critical-text); }
+.btn.danger:hover { background: var(--critical-wash); }
+.btn.sm { height: 30px; padding: 0 10px; font-size: 13px; }
+.btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.linkish { background: none; border: 0; padding: 0; color: var(--accent); text-decoration: underline; cursor: pointer; }
+
+/* In-page "are you sure" (components/TopBar.tsx: Confirm). */
+.confirm {
+  border: 1px solid var(--axis); border-left: 3px solid var(--accent); border-radius: 8px; background: var(--surface); color: var(--ink);
+  padding: 10px 12px; display: flex; flex-direction: column; gap: 8px; font-size: 13.5px; max-width: 76ch;
+}
+.page-head .confirm { max-width: 46ch; }
+.page-head .confirm p { color: var(--ink); margin-top: 0; }
+
+.field { display: flex; flex-direction: column; gap: 4px; font-size: 13px; color: var(--ink-2); }
+.field input, .field select {
+  height: 38px; padding: 0 10px; border: 1px solid var(--control); border-radius: 8px; background: #fff; color: var(--ink); font-size: 14px; min-width: 0;
+}
+.field .hint { font-size: 12px; color: var(--muted); }
+.field input[aria-invalid="true"] { border-color: var(--critical); background: var(--critical-wash); }
+.err { color: var(--critical-text); font-size: 12.5px; }
+.errs { margin: 10px 0 0; padding-left: 18px; color: var(--critical-text); font-size: 13px; }
+.date-in { height: 30px; padding: 0 6px; border: 1px solid var(--control); border-radius: 6px; background: #fff; color: var(--ink); font-size: 13px; }
+.form-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+@media (max-width: 760px) { .form-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+/* Two 141 px boxes cut a plant name or consent number short: one column on a phone. */
+@media (max-width: 480px) { .form-grid { grid-template-columns: minmax(0, 1fr); } }
+
+.tile .label { font-size: 13px; color: var(--ink-2); }
+.tile .value { font-size: 28px; font-weight: 650; letter-spacing: -0.02em; margin-top: 2px; line-height: 1.15; }
+.tile .value small { font-size: 15px; font-weight: 500; color: var(--muted); letter-spacing: 0; }
+.tile .hint { font-size: 12.5px; color: var(--muted); margin-top: 3px; }
+
+.sev { display: inline-flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 650; padding: 2px 8px 2px 6px; border-radius: 20px; white-space: nowrap; }
+.sev.high { background: var(--critical-wash); color: var(--critical-text); }
+.sev.medium { background: var(--warning-wash); color: var(--warning-text); }
+.sev.low { background: var(--wash); color: var(--ink-2); }
+.tag { font-size: 12px; color: var(--ink-2); background: var(--wash); border-radius: 5px; padding: 2px 7px; white-space: nowrap; }
+
+.notice { border-radius: 8px; padding: 10px 12px; font-size: 13.5px; background: var(--accent-wash); color: #0b4350; }
+.notice.warn { background: var(--warning-wash); color: var(--warning-text); }
+.notice.bad { background: var(--critical-wash); color: var(--critical-text); }
+/* A notice that lists several things (what stops a save, what to know before one). */
+.notice ul { margin: 4px 0 0; padding-left: 18px; }
+.notice li + li { margin-top: 4px; }
+.notice .fix { margin-top: 8px; padding-top: 8px; border-top: 1px solid rgba(11, 11, 11, 0.12); }
+.notice .btn { color: var(--ink); }
+.notice .linkish { color: inherit; font-weight: 600; }
+
+/* ---- flags ---- */
+.flag { padding: 13px 0; border-top: 1px solid var(--hairline); }
+.flag:first-child { border-top: 0; padding-top: 0; }
+.flag:last-child { padding-bottom: 0; }
+/* Badge and title stay together and take the room; category and date sit at
+   the right on a wide screen and always on their own left-aligned line on a
+   phone, whatever the length of the title. */
+.flag-top { display: flex; align-items: flex-start; gap: 6px 8px; flex-wrap: wrap; }
+.flag-what { display: flex; align-items: flex-start; gap: 8px; flex: 1 1 260px; min-width: 0; }
+.flag-what .sev { flex: none; }
+.flag-meta { display: flex; align-items: center; gap: 8px; flex: none; }
+@media (max-width: 760px) { .flag-meta { flex-basis: 100%; } }
+.flag-title { font-weight: 600; min-width: 0; overflow-wrap: anywhere; }
+.flag-detail { color: var(--ink-2); margin-top: 4px; font-size: 14px; }
+.flag-verify { margin-top: 6px; font-size: 13.5px; color: var(--ink); background: var(--wash); border-radius: 7px; padding: 7px 10px; }
+.flag-verify b { font-weight: 650; }
+.flag-link { margin-top: 6px; }
+.flag-link a { color: var(--accent); font-weight: 550; text-decoration: underline; text-underline-offset: 2px; }
+
+/* ---- tables ---- */
+.table-wrap { overflow-x: auto; border: 1px solid var(--hairline); border-radius: var(--radius); background: var(--surface); }
+table.data { border-collapse: collapse; width: 100%; font-size: 13px; font-variant-numeric: tabular-nums; }
+table.data th {
+  text-align: right; font-weight: 600; color: var(--ink-2); font-size: 12px; padding: 8px 8px; white-space: nowrap;
+  border-bottom: 1px solid var(--axis); background: var(--surface); position: sticky; top: 0;
+}
+table.data th small { display: block; font-weight: 400; color: var(--muted); font-size: 12px; }
+table.data td { text-align: right; padding: 6px 8px; border-bottom: 1px solid var(--hairline); white-space: nowrap; }
+table.data th.l, table.data td.l { text-align: left; }
+/* The first column (date, parameter name) stays in view when a wide table is
+   scrolled sideways, so a row of numbers never loses what it belongs to.
+   :where gives these rules no specificity at all, so anything that tints or
+   marks a cell or a row (.bad, .warn, a total row, a hover, the Log's flag
+   bar) still wins. background-color, not background: a hover drawn as a
+   background-image stays on top of it. */
+:where(.table-wrap table.data th:first-child, .table-wrap table.data td:first-child) { position: sticky; left: 0; z-index: 1; background-color: var(--surface); }
+:where(.table-wrap table.data th:first-child) { z-index: 2; }
+/* A hairline at the pinned column's edge. Drawn as its own element: a border
+   does not travel with a sticky cell in a collapsed table, and a box-shadow
+   on the cell would replace the Log's flag bar. */
+.table-wrap table.data th:first-child::after, .table-wrap table.data td:first-child::after {
+  content: ""; position: absolute; top: 0; right: 0; bottom: 0; width: 1px; background: var(--hairline);
+}
+table.data tr:last-child td { border-bottom: 0; }
+table.data tr.day-start td { border-top: 1px solid var(--axis); }
+table.data td.bad { background: var(--critical-wash); color: var(--critical-text); font-weight: 600; }
+table.data td.warn { background: var(--warning-wash); }
+table.data td.wrap { white-space: normal; min-width: 140px; max-width: 260px; }
+
+/* ---- review of a page (app/capture) ----
+   The photo sits above the table at every width and stays pinned under the
+   header while the table scrolls, so a cell is always checked against the
+   page. Side by side left 535 px for a 13-column table on a laptop and lost
+   the photo altogether on a phone. */
+.main:has(.review) { max-width: 1360px; }
+.review { --photo-h: 38vh; }
+.photo-pane { position: sticky; top: 54px; z-index: 6; background: var(--plane); padding: 6px 0 8px; }
+.photo { border: 1px solid var(--hairline); border-radius: var(--radius); overflow: auto; max-height: var(--photo-h); background: #2b2a28; }
+.photo img { display: block; width: 100%; height: auto; cursor: zoom-in; }
+.photo.zoom img { cursor: zoom-out; }
+.photo.zoom img { width: 220%; max-width: none; }
+.photo-tools { margin-top: 6px; }
+@media (max-width: 760px) { .review { --photo-h: 34vh; } }
+/* A cell reached by Tab or by "Go to the first" must land below the pinned photo, not under it. */
+.review table.data input, .review table.data select { scroll-margin-top: calc(var(--photo-h) + 190px); scroll-margin-bottom: 24px; }
+/* Narrower cells: every column of a full lab sheet fits a 1280 px laptop without sideways scrolling. */
+/* As wide as its columns, not stretched: on a page with few columns the cells stay together, as on the paper. */
+.review table.data { width: auto; }
+.review table.data th { padding: 6px 4px; white-space: normal; vertical-align: bottom; }
+.review table.data td.tight { padding: 2px 2px; }
+.review table.data input.cell { width: 50px; padding: 0 4px; }
+.review table.data input.cell.text { width: 78px; }
+.review table.data input.cell.date { width: 100px; }
+.review table.data input.cell.date::-webkit-calendar-picker-indicator { margin: 0; padding: 0; width: 13px; }
+.review table.data input.cell.time { width: 54px; }
+.review table.data input.cell.wide { width: 120px; }
+/* The pinned first column: row number, date and shift as plain text. On a
+   wide screen the table fits, so the Date column itself is pinned instead. */
+.review table.data .c-row { font-size: 12px; color: var(--ink-2); padding: 4px 8px 4px 6px; }
+@media (min-width: 1101px) {
+  .review table.data .c-row { display: none; }
+  .review table.data .c-date { position: sticky; left: 0; z-index: 1; background: var(--surface); box-shadow: inset -1px 0 0 var(--hairline); }
+  .review table.data th.c-date { z-index: 2; }
+}
+/* The row being worked on. */
+.review table.data tbody tr:focus-within td { background: #eef5f6; }
+/* Columns out of sight to the right are hinted at by a shade on that edge. */
+.table-shade { position: relative; }
+.table-shade.more::after {
+  content: ""; position: absolute; top: 1px; right: 1px; bottom: 1px; width: 28px; pointer-events: none;
+  background: linear-gradient(to right, rgba(11, 11, 11, 0), rgba(11, 11, 11, 0.16)); border-radius: 0 var(--radius) var(--radius) 0;
+}
+.legend-cells { display: flex; flex-wrap: wrap; gap: 4px 16px; color: var(--ink-2); margin-bottom: 6px; }
+.legend-cells .sw { display: inline-block; width: 18px; height: 12px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; border: 1px solid transparent; }
+.legend-cells .sw.low { background: var(--warning-wash); border-color: #a56f00; border-left-width: 3px; }
+.legend-cells .sw.edited { background: var(--accent-wash); border-color: var(--accent); }
+.legend-cells .sw.invalid { background: var(--critical-wash); border-color: var(--critical); }
+.legend-cells .sw.mark { background: var(--surface); border-color: var(--control); box-shadow: inset 0 -3px 0 var(--warning-text); }
+.cell-info { min-height: 19px; color: var(--ink-2); margin-top: 6px; }
+/* "This column matches the photo" in a column heading. */
+.th-check {
+  display: inline-flex; align-items: center; gap: 3px; margin-top: 3px; height: 22px; padding: 0 6px; cursor: pointer;
+  border: 1px solid #a56f00; border-radius: 11px; background: var(--warning-wash); color: var(--warning-text); font-size: 12px; font-weight: 650;
+}
+.th-check:hover { background: #fbe7b0; }
+.review-foot { align-items: center; }
+.review-foot p { margin-top: 0; }
+table.data input.cell {
+  width: 62px; height: 28px; text-align: right; border: 1px solid transparent; border-radius: 5px; background: transparent; padding: 0 5px;
+  font-variant-numeric: tabular-nums; font-size: 13px;
+}
+table.data input.cell.text { width: 96px; text-align: left; }
+table.data input.cell.wide { width: 150px; text-align: left; }
+table.data input.cell:hover { border-color: var(--axis); }
+table.data input.cell.boxed { border-color: var(--control); background: #fff; }
+/* Each state has a mark that does not depend on telling two pale fills apart:
+   a thick amber bar for "reader unsure", a solid outline for "changed by you". */
+table.data input.cell.low { background: var(--warning-wash); border-color: #a56f00; border-left-width: 3px; }
+table.data input.cell.edited { background: var(--accent-wash); border-color: var(--accent); }
+table.data input.cell.invalid { background: var(--critical-wash); border-color: var(--critical); }
+/* Differs from a value that is known some other way (a saved hand correction, a sample page's true value). */
+table.data input.cell.mark { box-shadow: inset 0 -3px 0 var(--warning-text); }
+/* After the state colours, so the focused cell is always marked, whatever its state. */
+table.data input.cell:focus { background: #fff; outline: 2px solid var(--accent); outline-offset: -2px; }
+table.data td.tight { padding: 3px 3px; }
+/* The shift picker in the review table, and the "add a column" picker under it. */
+.cell-select { height: 28px; padding: 0 2px; border: 1px solid transparent; border-radius: 5px; background: transparent; font-size: 13px; cursor: pointer; }
+.cell-select:hover { border-color: var(--axis); }
+.cell-select.invalid { background: var(--critical-wash); border-color: var(--critical); }
+.cell-select.boxed { height: 30px; padding: 0 6px; border-color: var(--control); background: var(--surface); max-width: 100%; }
+
+/* upload */
+.drop {
+  border: 1.5px dashed var(--axis); border-radius: var(--radius); background: var(--surface);
+  padding: 30px 16px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 10px;
+}
+.drop.over { border-color: var(--accent); background: var(--accent-wash); }
+/* While a page is being read: the photo that was sent, so the wait is not an empty box. */
+.drop.reading img { display: block; max-width: 100%; max-height: 240px; border-radius: 6px; border: 1px solid var(--hairline); }
+.samples { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 12px; }
+@media (max-width: 760px) { .samples { grid-template-columns: minmax(0, 1fr); } }
+.sample { border: 1px solid var(--hairline); border-radius: var(--radius); overflow: hidden; background: var(--surface); text-align: left; cursor: pointer; padding: 0; display: flex; flex-direction: column; }
+.sample:hover { border-color: var(--accent); }
+.sample img { width: 100%; height: 130px; object-fit: cover; object-position: top; display: block; background: #2b2a28; }
+.sample div { padding: 10px 12px; }
+.sample b { display: block; font-size: 14px; }
+.sample span { font-size: 12.5px; color: var(--ink-2); display: block; }
+.sample span.tag { display: inline-block; font-size: 12px; margin: 4px 0; }
+.spinner { width: 22px; height: 22px; border-radius: 50%; border: 2.5px solid var(--hairline); border-top-color: var(--accent); animation: spin 0.8s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes pulse { 50% { opacity: 0.35; } }
+/* Reduced motion: no rotation. A slow fade still shows that work is going on. */
+@media (prefers-reduced-motion: reduce) {
+  .spinner { animation: pulse 2s ease-in-out infinite; border-color: var(--accent); }
+  html { scroll-behavior: auto; }
+}
+
+/* welcome */
+.hero { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr); gap: 24px; align-items: start; }
+.hero figure { margin: 0; }
+.hero figure img { display: block; width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--hairline); background: #2b2a28; }
+.hero figcaption { font-size: 12.5px; color: var(--ink-2); margin-top: 6px; }
+.hero .example { margin-top: 12px; border: 1px solid var(--hairline); border-radius: 8px; padding: 12px; background: #fff; }
+@media (max-width: 900px) { .hero { grid-template-columns: minmax(0, 1fr); } }
+
+/* "What JalLog checks" on the Flags screen: a list, so a description gets the
+   full width on a phone instead of a 4-character table column. */
+.rules { list-style: none; margin: 0; padding: 0; border: 1px solid var(--hairline); border-radius: var(--radius); background: var(--surface); }
+.rules li { display: grid; grid-template-columns: minmax(150px, 230px) 130px minmax(0, 1fr); gap: 4px 12px; align-items: baseline; padding: 9px 12px; border-top: 1px solid var(--hairline); font-size: 13px; }
+.rules li:first-child { border-top: 0; }
+.rules .what { color: var(--ink-2); }
+@media (max-width: 760px) {
+  .rules li { grid-template-columns: minmax(0, 1fr) auto; }
+  .rules .what { grid-column: 1 / -1; }
+}
+details.fold > summary { cursor: pointer; font-weight: 650; font-size: 16px; }
+details.fold > summary .sub { font-weight: 400; color: var(--muted); font-size: 13px; margin-left: 8px; }
+details.fold[open] > summary { margin-bottom: 12px; }
+.choices { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: 18px; }
+.choice { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; }
+.choice p { color: var(--ink-2); }
+.choice .btn { white-space: normal; height: auto; min-height: 38px; padding: 7px 14px; text-align: left; line-height: 1.25; }
+@media (max-width: 760px) { .choices { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---- charts ---- */
+.chart { position: relative; min-width: 0; }
+.chart svg { display: block; max-width: 100%; overflow: visible; }
+.chart text { font-family: var(--sans); font-size: 12px; fill: var(--muted); font-variant-numeric: tabular-nums; }
+.chart .tip {
+  position: absolute; pointer-events: none; background: var(--ink); color: #fff; font-size: 12px; padding: 5px 8px; border-radius: 6px;
+  white-space: nowrap; transform: translate(-50%, -100%); margin-top: -10px; z-index: 5; font-variant-numeric: tabular-nums;
+}
+.chart .tip span { color: #c3c2b7; }
+.legend { display: flex; gap: 14px; flex-wrap: wrap; font-size: 12px; color: var(--ink-2); margin-top: 6px; }
+.legend i { display: inline-block; vertical-align: middle; margin-right: 5px; }
+
+.calendar { display: grid; grid-template-columns: repeat(auto-fill, minmax(34px, 1fr)); gap: 6px; }
+.day { display: flex; flex-direction: column; align-items: center; gap: 3px; font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.day .dots { display: flex; gap: 2px; }
+.day .dots i { width: 9px; height: 16px; border-radius: 2px; background: var(--series); }
+.day .dots i.miss { background: var(--surface); box-shadow: inset 0 0 0 1.5px var(--critical); }
+/* A slot nobody was due to fill: neutral, never drawn as a gap. */
+.day .dots i.na { background: var(--hairline); }
+
+/* ---- report ---- */
+.report { background: #fff; border: 1px solid var(--hairline); border-radius: var(--radius); padding: 28px; }
+.report h1 { font-size: 19px; }
+.report h2 { margin: 22px 0 8px; font-size: 14px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--ink-2); }
+.report .meta { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px 18px; margin-top: 12px; font-size: 13px; }
+.report .meta b { display: block; font-weight: 500; color: var(--muted); font-size: 12px; }
+.report table.data { font-size: 12px; }
+.report .table-wrap { border-radius: 6px; }
+@media (max-width: 760px) { .report { padding: 16px; } .report .meta { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+@media print {
+  .topbar, .no-print, .skip, .banner { display: none !important; }
+  body { background: #fff; font-size: 12px; }
+  .main { padding: 0; max-width: none; }
+  .report { border: 0; padding: 0; }
+  .table-wrap { overflow: visible; border-color: #999; }
+  table.data th { position: static; }
+  /* Nothing scrolls on paper: the pinned first column goes back in line. */
+  .table-wrap table.data th:first-child, .table-wrap table.data td:first-child { position: static; }
+  .table-wrap table.data th:first-child::after, .table-wrap table.data td:first-child::after { display: none; }
+  table.data td, table.data th { padding: 3px 5px; }
+  .report h2 { break-after: avoid; }
+  tr { break-inside: avoid; }
+  td.bad, td.warn { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  @page { size: A4 landscape; margin: 12mm; }
 }

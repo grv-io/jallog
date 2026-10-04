@@ -1,0 +1,71 @@
+/* Styles for the monthly report only. The shared look (.report, .meta,
+   table.data, the base print rules) lives in app/globals.css; this file adds
+   what the report needs on top, and the print fixes that keep every column
+   on an A4 landscape page. Selectors carry two classes so they win over the
+   global table rules whichever stylesheet loads first. */
+
+/* A plant name, remark or flag text with no spaces must wrap, not widen the page. */
+.sheet { overflow-wrap: anywhere; min-width: 0; }
+
+.sample {
+  margin-top: 8px; padding: 6px 10px; border-radius: 6px; font-size: 12.5px;
+  background: var(--warning-wash); color: var(--warning-text);
+}
+
+/* "Partial month: entries on 3 of 31 days". Printed too: a reader of the
+   paper copy must not take three days for a month. */
+.partial { margin-top: 6px; font-size: 13px; font-weight: 600; color: var(--warning-text); }
+
+.sheet .src { display: block; color: var(--muted); font-size: 12px; }
+
+.sheet .tbl td.gapDay { color: var(--muted); text-align: left; }
+.sheet .tbl tr.total td { font-weight: 650; border-top: 1px solid var(--axis); background: var(--wash); }
+.caption { margin-top: 6px; font-size: 12px; color: var(--muted); }
+
+.list { margin: 0; padding-left: 18px; }
+.list li + li { margin-top: 3px; }
+.notes { margin: 0; padding-left: 18px; font-size: 12.5px; color: var(--ink-2); }
+.notes li + li { margin-top: 3px; }
+
+/* Sign-off lines. The global rule gives each line a fixed 180px minimum:
+   two of them need 360px, and a 390px phone has 324px inside the report, so
+   the page scrolled sideways. Here the lines may shrink. */
+.signRow { display: flex; justify-content: space-between; gap: 24px; margin-top: 44px; font-size: 13px; color: var(--ink-2); }
+.signRow div { flex: 0 1 180px; min-width: 0; border-top: 1px solid var(--ink); padding-top: 5px; }
+
+.closing { margin-top: 18px; font-size: 13px; color: var(--muted); }
+
+/* The month picker and buttons: let them wrap and shrink on a phone. */
+.controls { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; min-width: 0; max-width: 100%; }
+.controls select { max-width: 100%; }
+
+@media print {
+  /* A landscape page has room for four key figures across; the screen rule
+     for narrow windows must not apply on paper. */
+  article.sheet .figures { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 4px 16px; }
+
+  .sample { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  /* A4 landscape with 12mm margins leaves about 1030px. A register with
+     every column filled has 23 columns in the daily table. Headings may
+     wrap, cells may break as a last resort, and a wide table drops to a
+     smaller type, so the table always fits the page instead of running off
+     its right edge (nothing can scroll on paper). */
+  .sheet .wrap { overflow: visible; border-radius: 0; }
+  .sheet .tbl { width: 100%; max-width: 100%; table-layout: auto; }
+  .sheet .tbl th { white-space: normal; position: static; vertical-align: bottom; }
+  .sheet .tbl td { white-space: normal; overflow-wrap: anywhere; }
+  .sheet .tbl th small { font-size: 9px; }
+  .sheet .dense th, .sheet .dense td { font-size: 9.5px; padding: 2px 3px; }
+  .sheet .dense th small { font-size: 8px; }
+  .sheet .veryDense th, .sheet .veryDense td { font-size: 8px; padding: 2px 2px; }
+  .sheet .veryDense th small { font-size: 7px; }
+  .sheet .tbl tr.total td { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  /* Column headings repeat on every printed page of a long table. */
+  .sheet .tbl thead { display: table-header-group; }
+
+  .list li, .notes li { break-inside: avoid; }
+  .signRow, .closing { break-inside: avoid; }
+  .signRow { margin-top: 36px; }
+}

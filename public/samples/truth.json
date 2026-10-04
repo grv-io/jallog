@@ -1,0 +1,3081 @@
+{
+  "pages": [
+    {
+      "file": "page-1.jpg",
+      "title": "Clean, typical 3-shift STP page",
+      "description": "Aravali Residency STP, 250 KLD. 12 rows, 28 Sep to 1 Oct 2026, shifts A, B and C. BOD is filled on one row only, there are two remarks, and the date is written on the first shift of each day (blank or a ditto mark after).",
+      "plantKind": "STP",
+      "fallbackDate": "2026-09-28",
+      "rows": [
+        {
+          "date": "2026-09-28",
+          "shift": "A",
+          "time": null,
+          "operator": "Ramesh",
+          "values": {
+            "inletFlow": 77,
+            "outletFlow": 74,
+            "phInlet": 7.2,
+            "phOutlet": 7.6,
+            "doAeration": 2.7,
+            "mlss": 3160,
+            "sv30": 439,
+            "codOutlet": 59,
+            "bodOutlet": null,
+            "tssOutlet": 13,
+            "residualChlorine": 0.6,
+            "blowerHours": 7.5,
+            "energyKwh": 48308
+          },
+          "cellMeta": {},
+          "remarks": null
+        },
+        {
+          "date": "2026-09-28",
+          "shift": "B",
+          "time": null,
+          "operator": "Suresh",
+          "values": {
+            "inletFlow": 84,
+            "outletFlow": 81,
+            "phInlet": 6.9,
+            "phOutlet": 7.3,
+            "doAeration": 1.7,
+            "mlss": 3150,
+            "sv30": 318,
+            "codOutlet": 86,
+            "bodOutlet": null,
+            "tssOutlet": 18,
+            "residualChlorine": 0.4,
+            "blowerHours": 7,
+            "energyKwh": 48376
+          },
+          "cellMeta": {},
+          "remarks": null
+        },
+        {
+          "date": "2026-09-28",
+          "shift": "C",
+          "time": null,
+          "operator": "Mahesh",
+          "values": {
+            "inletFlow": 61,
+            "outletFlow": 58,
+            "phInlet": 7.6,
+            "phOutlet": 7.3,
+            "doAeration": 2.9,
+            "mlss": 3070,
+            "sv30": 421,
+            "codOutlet": 79,
+            "bodOutlet": null,
+            "tssOutlet": 13,
+            "residualChlorine": 0.5,
+            "blowerHours": 5.5,
+            "energyKwh": 48462
+          },
+          "cellMeta": {},
+          "remarks": null
+        },
+        {
+          "date": "2026-09-29",
+          "shift": "A",
+          "time": null,
+          "operator": "Ramesh",
+          "values": {
+            "inletFlow": 91,
+            "outletFlow": 86,
+            "phInlet": 7,
+            "phOutlet": 7,
+            "doAeration": 3.3,
+            "mlss": 3100,
+            "sv30": 350,
+            "codOutlet": 55,
+            "bodOutlet": null,
+            "tssOutlet": 31,
+            "residualChlorine": 0.5,
+            "blowerHours": 7.5,
+            "energyKwh": 48530
+          },
+          "cellMeta": {},
+          "remarks": null
+        },
+        {
+          "date": "2026-09-29",
+          "shift": "B",
+          "time": null,
+          "operator": "Suresh",
+          "values": {
+            "inletFlow": 79,
+            "outletFlow": 75,
+            "phInlet": 7.1,
+            "phOutlet": 7.5,
+            "doAeration": 3.3,
+            "mlss": 3180,
+            "sv30": 359,
+            "codOutlet": 66,
+            "bodOutlet": null,
+            "tssOutlet": 31,
+            "residualChlorine": 0.4,
+            "blowerHours": 7.5,
+            "energyKwh": 48600
+          },
+          "cellMeta": {},
+          "remarks": "blower-2 belt changed"
+        },
+        {
+          "date": "2026-09-29",
+          "shift": "C",
+          "time": null,
+          "operator": "Mahesh",
+          "values": {
+            "inletFlow": 75,
+            "outletFlow": 72,
+            "phInlet": 7.2,
+            "phOutlet": 7.2,
+            "doAeration": 1.9,
+            "mlss": 3170,
+            "sv30": 342,
+            "codOutlet": 80,
+            "bodOutlet": 18,
+            "tssOutlet": 28,
+            "residualChlorine": 0.4,
+            "blowerHours": 5.5,
+            "energyKwh": 48711
+          },
+          "cellMeta": {},
+          "remarks": null
+        },
+        {
+          "date": "2026-09-30",
+          "shift": "A",
+          "time": null,
+          "operator": "Ramesh",
+          "values": {
+            "inletFlow": 100,
+            "outletFlow": 94,
+            "phInlet": 7.4,
+            "phOutlet": 7.2,
+            "doAeration": 2.7,
+            "mlss": 3210,
+            "sv30": 401,
+            "codOutlet": 83,
+            "bodOutlet": null,
+            "tssOutlet": 32,
+            "residualChlorine": 0.5,
+            "blowerHours": 8,
+            "energyKwh": 48810
+          },
+          "cellMeta": {},
+          "remarks": null
+        },
+        {
+          "date": "2026-09-30",
+          "shift": "B",
+          "time": null,
+          "operator": "Suresh",
+          "values": {
+            "inletFlow": 99,
+            "outletFlow": 95,
+            "phInlet": 7.1,
+            "phOutlet": 7.3,
+            "doAeration": 2.5,
+            "mlss": 3230,
+            "sv30": 323,
+            "codOutlet": 75,
+            "bodOutlet": null,
+            "tssOutlet": 36,
+            "residualChlorine": 0.7,
+            "blowerHours": 7,
+            "energyKwh": 48903
+          },
+          "cellMeta": {},
+          "remarks": null
+        },
+        {
+          "date": "2026-09-30",
+          "shift": "C",
+          "time": null,
+          "operator": "Mahesh",
+          "values": {
+            "inletFlow": 63,
+            "outletFlow": 60,
+            "phInlet": 7,
+            "phOutlet": 7.3,
+            "doAeration": 2.8,
+            "mlss": 3260,
+            "sv30": 375,
+            "codOutlet": 53,
+            "bodOutlet": null,
+            "tssOutlet": 33,
+            "residualChlorine": 0.4,
+            "blowerHours": 8,
+            "energyKwh": 49021
+          },
+          "cellMeta": {},
+          "remarks": null
+        },
+        {
+          "date": "2026-10-01",
+          "shift": "A",
+          "time": null,
+          "operator": "Ramesh",
+          "values": {
+            "inletFlow": 94,
+            "outletFlow": 91,
+            "phInlet": 7.3,
+            "phOutlet": 7.2,
+            "doAeration": 2.5,
+            "mlss": 3250,
+            "sv30": 312,
+            "codOutlet": 70,
+            "bodOutlet": null,
+            "tssOutlet": 29,
+            "residualChlorine": 0.6,
+            "blowerHours": 7,
+            "energyKwh": 49105
+          },
+          "cellMeta": {},
+          "remarks": "power cut 2 hrs"
+        },
+        {
+          "date": "2026-10-01",
+          "shift": "B",
+          "time": null,
+          "operator": "Suresh",
+          "values": {
+            "inletFlow": 89,
+            "outletFlow": 85,
+            "phInlet": 7.3,
+            "phOutlet": 7,
+            "doAeration": 2,
+            "mlss": 3220,
+            "sv30": 428,
+            "codOutlet": 93,
+            "bodOutlet": null,
+            "tssOutlet": 33,
+            "residualChlorine": 0.7,
+            "blowerHours": 6,
+            "energyKwh": 49182
+          },
+          "cellMeta": {},
+          "remarks": null
+        },
+        {
+          "date": "2026-10-01",
+          "shift": "C",
+          "time": null,
+          "operator": "Mahesh",
+          "values": {
+            "inletFlow": 67,
+            "outletFlow": 64,
+            "phInlet": 7.1,
+            "phOutlet": 7.8,
+            "doAeration": 3.4,
+            "mlss": 3180,
+            "sv30": 413,
+            "codOutlet": 79,
+            "bodOutlet": null,
+            "tssOutlet": 31,
+            "residualChlorine": 0.7,
+            "blowerHours": 8,
+            "energyKwh": 49261
+          },
+          "cellMeta": {},
+          "remarks": null
+        }
+      ],
+      "plant": "shift",
+      "recorded": {
+        "model": "gemini-3.5-flash",
+        "recordedOn": "2026-10-04",
+        "label": "Reading recorded on 4 Oct 2026 from gemini-3.5-flash",
+        "rows": [
+          {
+            "date": "2026-09-28",
+            "shift": "A",
+            "time": null,
+            "operator": "Ramesh",
+            "values": {
+              "inletFlow": 77,
+              "outletFlow": 74,
+              "phInlet": 7.2,
+              "phOutlet": 7.6,
+              "doAeration": 2.7,
+              "mlss": 3160,
+              "sv30": 439,
+              "codOutlet": 59,
+              "tssOutlet": 13,
+              "residualChlorine": 0.6,
+              "blowerHours": 7.5,
+              "energyKwh": 48308
+            },
+            "cellMeta": {
+              "inletFlow": {
+                "raw": "77",
+                "confidence": "high"
+              },
+              "outletFlow": {
+                "raw": "74",
+                "confidence": "high"
+              },
+              "phInlet": {
+                "raw": "7.2",
+                "confidence": "high"
+              },
+              "phOutlet": {
+                "raw": "7.6",
+                "confidence": "high"
+              },
+              "doAeration": {
+                "raw": "2.7",
+                "confidence": "high"
+              },
+              "mlss": {
+                "raw": "3160",
+                "confidence": "high"
+              },
+              "sv30": {
+                "raw": "439",
+                "confidence": "high"
+              },
+              "codOutlet": {
+                "raw": "59",
+                "confidence": "high"
+              },
+              "tssOutlet": {
+                "raw": "13",
+                "confidence": "high"
+              },
+              "residualChlorine": {
+                "raw": "0.6",
+                "confidence": "high"
+              },
+              "blowerHours": {
+                "raw": "7.5",
+                "confidence": "high"
+              },
+              "energyKwh": {
+                "raw": "48308",
+                "confidence": "high"
+              }
+            },
+            "remarks": null
+          },
+          {
+            "date": "2026-09-28",
+            "shift": "B",
+            "time": null,
+            "operator": "Suresh",
+            "values": {
+              "inletFlow": 84,
+              "outletFlow": 81,
+              "phInlet": 6.9,
+              "phOutlet": 7.3,
+              "doAeration": 1.7,
+              "mlss": 3150,
+              "sv30": 318,
+              "codOutlet": 86,
+              "tssOutlet": 18,
+              "residualChlorine": 0.4,
+              "blowerHours": 7,
+              "energyKwh": 48376
+            },
+            "cellMeta": {
+              "inletFlow": {
+                "raw": "84",
+                "confidence": "high"
+              },
+              "outletFlow": {
+                "raw": "81",
+                "confidence": "high"
+              },
+              "phInlet": {
+                "raw": "6.9",
+                "confidence": "high"
+              },
+              "phOutlet": {
+                "raw": "7.3",
+                "confidence": "high"
+              },
+              "doAeration": {
+                "raw": "1.7",
+                "confidence": "high"
+              },
+              "mlss": {
+                "raw": "3150",
+                "confidence": "high"
+              },
+              "sv30": {
+                "raw": "318",
+                "confidence": "high"
+              },
+              "codOutlet": {
+                "raw": "86",
+                "confidence": "high"
+              },
+              "tssOutlet": {
+                "raw": "18",
+                "confidence": "high"
+              },
+              "residualChlorine": {
+                "raw": "0.4",
+                "confidence": "high"
+              },
+              "blowerHours": {
+                "raw": "7.0",
+                "confidence": "high"
+              },
+              "energyKwh": {
+                "raw": "48376",
+                "confidence": "high"
+              }
+            },
+            "remarks": null
+          },
+          {
+            "date": "2026-09-28",
+            "shift": "C",
+            "time": null,
+            "operator": "Mahesh",
+            "values": {
+              "inletFlow": 61,
+              "outletFlow": 58,
+              "phInlet": 7.6,
+              "phOutlet": 7.3,
+              "doAeration": 2.9,
+              "mlss": 3070,
+              "sv30": 421,
+              "codOutlet": 79,
+              "tssOutlet": 13,
+              "residualChlorine": 0.5,
+              "blowerHours": 5.5,
+              "energyKwh": 48462
+            },
+            "cellMeta": {
+              "inletFlow": {
+                "raw": "61",
+                "confidence": "high"
+              },
+              "outletFlow": {
+                "raw": "58",
+                "confidence": "high"
+              },
+              "phInlet": {
+                "raw": "7.6",
+                "confidence": "high"
+              },
+              "phOutlet": {
+                "raw": "7.3",
+                "confidence": "high"
+              },
+              "doAeration": {
+                "raw": "2.9",
+                "confidence": "high"
+              },
+              "mlss": {
+                "raw": "3070",
+                "confidence": "high"
+              },
+              "sv30": {
+                "raw": "421",
+                "confidence": "high"
+              },
+              "codOutlet": {
+                "raw": "79",
+                "confidence": "high"
+              },
+              "tssOutlet": {
+                "raw": "13",
+                "confidence": "high"
+              },
+              "residualChlorine": {
+                "raw": "0.5",
+                "confidence": "high"
+              },
+              "blowerHours": {
+                "raw": "5.5",
+                "confidence": "high"
+              },
+              "energyKwh": {
+                "raw": "48462",
+                "confidence": "high"
+              }
+            },
+            "remarks": null
+          },
+          {
+            "date": "2026-09-29",
+            "shift": "A",
+            "time": null,
+            "operator": "Ramesh",
+            "values": {
+              "inletFlow": 91,
+              "outletFlow": 86,
+              "phInlet": 7,
+              "phOutlet": 7,
+              "doAeration": 3.3,
+              "mlss": 3100,
+              "sv30": 350,
+              "codOutlet": 55,
+              "tssOutlet": 31,
+              "residualChlorine": 0.5,
+              "blowerHours": 7.5,
+              "energyKwh": 48530
+            },
+            "cellMeta": {
+              "inletFlow": {
+                "raw": "91",
+                "confidence": "high"
+              },
+              "outletFlow": {
+                "raw": "86",
+                "confidence": "high"
+              },
+              "phInlet": {
+                "raw": "7.0",
+                "confidence": "high"
+              },
+              "phOutlet": {
+                "raw": "7.0",
+                "confidence": "high"
+              },
+              "doAeration": {
+                "raw": "3.3",
+                "confidence": "high"
+              },
+              "mlss": {
+                "raw": "3100",
+                "confidence": "high"
+              },
+              "sv30": {
+                "raw": "350",
+                "confidence": "high"
+              },
+              "codOutlet": {
+                "raw": "55",
+                "confidence": "high"
+              },
+              "tssOutlet": {
+                "raw": "31",
+                "confidence": "high"
+              },
+              "residualChlorine": {
+                "raw": "0.5",
+                "confidence": "high"
+              },
+              "blowerHours": {
+                "raw": "7.5",
+                "confidence": "high"
+              },
+              "energyKwh": {
+                "raw": "48530",
+                "confidence": "high"
+              }
+            },
+            "remarks": null
+          },
+          {
+            "date": "2026-09-29",
+            "shift": "B",
+            "time": null,
+            "operator": "Suresh",
+            "values": {
+              "inletFlow": 79,
+              "outletFlow": 75,
+              "phInlet": 7.1,
+              "phOutlet": 7.5,
+              "doAeration": 3.3,
+              "mlss": 3180,
+              "sv30": 359,
+              "codOutlet": 66,
+              "tssOutlet": 31,
+              "residualChlorine": 0.4,
+              "blowerHours": 7.5,
+              "energyKwh": 48600
+            },
+            "cellMeta": {
+              "inletFlow": {
+                "raw": "79",
+                "confidence": "high"
+              },
+              "outletFlow": {
+                "raw": "75",
+                "confidence": "high"
+              },
+              "phInlet": {
+                "raw": "7.1",
+                "confidence": "high"
+              },
+              "phOutlet": {
+                "raw": "7.5",
+                "confidence": "high"
+              },
+              "doAeration": {
+                "raw": "3.3",
+                "confidence": "high"
+              },
+              "mlss": {
+                "raw": "3180",
+                "confidence": "high"
+              },
+              "sv30": {
+                "raw": "359",
+                "confidence": "high"
+              },
+              "codOutlet": {
+                "raw": "66",
+                "confidence": "high"
+              },
+              "tssOutlet": {
+                "raw": "31",
+                "confidence": "high"
+              },
+              "residualChlorine": {
+                "raw": "0.4",
+                "confidence": "high"
+              },
+              "blowerHours": {
+                "raw": "7.5",
+                "confidence": "high"
+              },
+              "energyKwh": {
+                "raw": "48600",
+                "confidence": "high"
+              }
+            },
+            "remarks": "blower-2 belt changed"
+          },
+          {
+            "date": "2026-09-29",
+            "shift": "C",
+            "time": null,
+            "operator": "Mahesh",
+            "values": {
+              "inletFlow": 75,
+              "outletFlow": 72,
+              "phInlet": 7.2,
+              "phOutlet": 7.2,
+              "doAeration": 1.9,
+              "mlss": 3170,
+              "sv30": 342,
+              "codOutlet": 80,
+              "bodOutlet": 18,
+              "tssOutlet": 28,
+              "residualChlorine": 0.4,
+              "blowerHours": 5.5,
+              "energyKwh": 48711
+            },
+            "cellMeta": {
+              "inletFlow": {
+                "raw": "75",
+                "confidence": "high"
+              },
+              "outletFlow": {
+                "raw": "72",
+                "confidence": "high"
+              },
+              "phInlet": {
+                "raw": "7.2",
+                "confidence": "high"
+              },
+              "phOutlet": {
+                "raw": "7.2",
+                "confidence": "high"
+              },
+              "doAeration": {
+                "raw": "1.9",
+                "confidence": "high"
+              },
+              "mlss": {
+                "raw": "3170",
+                "confidence": "high"
+              },
+              "sv30": {
+                "raw": "342",
+                "confidence": "high"
+              },
+              "codOutlet": {
+                "raw": "80",
+                "confidence": "high"
+              },
+              "bodOutlet": {
+                "raw": "18",
+                "confidence": "high"
+              },
+              "tssOutlet": {
+                "raw": "28",
+                "confidence": "high"
+              },
+              "residualChlorine": {
+                "raw": "0.4",
+                "confidence": "high"
+              },
+              "blowerHours": {
+                "raw": "5.5",
+                "confidence": "high"
+              },
+              "energyKwh": {
+                "raw": "48711",
+                "confidence": "high"
+              }
+            },
+            "remarks": null
+          },
+          {
+            "date": "2026-09-30",
+            "shift": "A",
+            "time": null,
+            "operator": "Ramesh",
+            "values": {
+              "inletFlow": 100,
+              "outletFlow": 94,
+              "phInlet": 7.4,
+              "phOutlet": 7.2,
+              "doAeration": 2.7,
+              "mlss": 3210,
+              "sv30": 401,
+              "codOutlet": 83,
+              "tssOutlet": 32,
+              "residualChlorine": 0.5,
+              "blowerHours": 8,
+              "energyKwh": 48810
+            },
+            "cellMeta": {
+              "inletFlow": {
+                "raw": "100",
+                "confidence": "high"
+              },
+              "outletFlow": {
+                "raw": "94",
+                "confidence": "high"
+              },
+              "phInlet": {
+                "raw": "7.4",
+                "confidence": "high"
+              },
+              "phOutlet": {
+                "raw": "7.2",
+                "confidence": "high"
+              },
+              "doAeration": {
+                "raw": "2.7",
+                "confidence": "high"
+              },
+              "mlss": {
+                "raw": "3210",
+                "confidence": "high"
+              },
+              "sv30": {
+                "raw": "401",
+                "confidence": "high"
+              },
+              "codOutlet": {
+                "raw": "83",
+                "confidence": "high"
+              },
+              "tssOutlet": {
+                "raw": "32",
+                "confidence": "high"
+              },
+              "residualChlorine": {
+                "raw": "0.5",
+                "confidence": "high"
+              },
+              "blowerHours": {
+                "raw": "8.0",
+                "confidence": "high"
+              },
+              "energyKwh": {
+                "raw": "48810",
+                "confidence": "high"
+              }
+            },
+            "remarks": null
+          },
+          {
+            "date": "2026-09-30",
+            "shift": "B",
+            "time": null,
+            "operator": "Suresh",
+            "values": {
+              "inletFlow": 99,
+              "outletFlow": 95,
+              "phInlet": 7.1,
+              "phOutlet": 7.3,
+              "doAeration": 2.5,
+              "mlss": 3230,
+              "sv30": 323,
+              "codOutlet": 75,
+              "tssOutlet": 36,
+              "residualChlorine": 0.7,
+              "blowerHours": 7,
+              "energyKwh": 48903
+            },
+            "cellMeta": {
+              "inletFlow": {
+                "raw": "99",
+                "confidence": "high"
+              },
+              "outletFlow": {
+                "raw": "95",
+                "confidence": "high"
+              },
+              "phInlet": {
+                "raw": "7.1",
+                "confidence": "high"
+              },
+              "phOutlet": {
+                "raw": "7.3",
+                "confidence": "high"
+              },
+              "doAeration": {
+                "raw": "2.5",
+                "confidence": "high"
+              },
+              "mlss": {
+                "raw": "3230",
+                "confidence": "high"
+              },
+              "sv30": {
+                "raw": "323",
+                "confidence": "high"
+              },
+              "codOutlet": {
+                "raw": "75",
+                "confidence": "high"
+              },
+              "tssOutlet": {
+                "raw": "36",
+                "confidence": "high"
+              },
+              "residualChlorine": {
+                "raw": "0.7",
+                "confidence": "high"
+              },
+              "blowerHours": {
+                "raw": "7.0",
+                "confidence": "high"
+              },
+              "energyKwh": {
+                "raw": "48903",
+                "confidence": "high"
+              }
+            },
+            "remarks": null
+          },
+          {
+            "date": "2026-09-30",
+            "shift": "C",
+            "time": null,
+            "operator": "Mahesh",
+            "values": {
+              "inletFlow": 63,
+              "outletFlow": 60,
+              "phInlet": 7,
+              "phOutlet": 7.3,
+              "doAeration": 2.8,
+              "mlss": 3260,
+              "sv30": 375,
+              "codOutlet": 53,
+              "tssOutlet": 33,
+              "residualChlorine": 0.4,
+              "blowerHours": 8,
+              "energyKwh": 49021
+            },
+            "cellMeta": {
+              "inletFlow": {
+                "raw": "63",
+                "confidence": "high"
+              },
+              "outletFlow": {
+                "raw": "60",
+                "confidence": "high"
+              },
+              "phInlet": {
+                "raw": "7.0",
+                "confidence": "high"
+              },
+              "phOutlet": {
+                "raw": "7.3",
+                "confidence": "high"
+              },
+              "doAeration": {
+                "raw": "2.8",
+                "confidence": "high"
+              },
+              "mlss": {
+                "raw": "3260",
+                "confidence": "high"
+              },
+              "sv30": {
+                "raw": "375",
+                "confidence": "high"
+              },
+              "codOutlet": {
+                "raw": "53",
+                "confidence": "high"
+              },
+              "tssOutlet": {
+                "raw": "33",
+                "confidence": "high"
+              },
+              "residualChlorine": {
+                "raw": "0.4",
+                "confidence": "high"
+              },
+              "blowerHours": {
+                "raw": "8.0",
+                "confidence": "high"
+              },
+              "energyKwh": {
+                "raw": "49021",
+                "confidence": "high"
+              }
+            },
+            "remarks": null
+          },
+          {
+            "date": "2026-10-01",
+            "shift": "A",
+            "time": null,
+            "operator": "Ramesh",
+            "values": {
+              "inletFlow": 94,
+              "outletFlow": 91,
+              "phInlet": 7.3,
+              "phOutlet": 7.2,
+              "doAeration": 2.5,
+              "mlss": 3250,
+              "sv30": 312,
+              "codOutlet": 70,
+              "tssOutlet": 29,
+              "residualChlorine": 0.6,
+              "blowerHours": 7,
+              "energyKwh": 49105
+            },
+            "cellMeta": {
+              "inletFlow": {
+                "raw": "94",
+                "confidence": "high"
+              },
+              "outletFlow": {
+                "raw": "91",
+                "confidence": "high"
+              },
+              "phInlet": {
+                "raw": "7.3",
+                "confidence": "high"
+              },
+              "phOutlet": {
+                "raw": "7.2",
+                "confidence": "high"
+              },
+              "doAeration": {
+                "raw": "2.5",
+                "confidence": "high"
+              },
+              "mlss": {
+                "raw": "3250",
+                "confidence": "high"
+              },
+              "sv30": {
+                "raw": "312",
+                "confidence": "high"
+              },
+              "codOutlet": {
+                "raw": "70",
+                "confidence": "high"
+              },
+              "tssOutlet": {
+                "raw": "29",
+                "confidence": "high"
+              },
+              "residualChlorine": {
+                "raw": "0.6",
+                "confidence": "high"
+              },
+              "blowerHours": {
+                "raw": "7.0",
+                "confidence": "high"
+              },
+              "energyKwh": {
+                "raw": "49105",
+                "confidence": "high"
+              }
+            },
+            "remarks": "power cut 2 hrs"
+          },
+          {
+            "date": "2026-10-01",
+            "shift": "B",
+            "time": null,
+            "operator": "Suresh",
+            "values": {
+              "inletFlow": 89,
+              "outletFlow": 85,
+              "phInlet": 7.3,
+              "phOutlet": 7,
+              "doAeration": 2,
+              "mlss": 3220,
+              "sv30": 428,
+              "codOutlet": 93,
+              "tssOutlet": 33,
+              "residualChlorine": 0.7,
+              "blowerHours": 6,
+              "energyKwh": 49182
+            },
+            "cellMeta": {
+              "inletFlow": {
+                "raw": "89",
+                "confidence": "high"
+              },
+              "outletFlow": {
+                "raw": "85",
+                "confidence": "high"
+              },
+              "phInlet": {
+                "raw": "7.3",
+                "confidence": "high"
+              },
+              "phOutlet": {
+                "raw": "7.0",
+                "confidence": "high"
+              },
+              "doAeration": {
+                "raw": "2.0",
+                "confidence": "high"
+              },
+              "mlss": {
+                "raw": "3220",
+                "confidence": "high"
+              },
+              "sv30": {
+                "raw": "428",
+                "confidence": "high"
+              },
+              "codOutlet": {
+                "raw": "93",
+                "confidence": "high"
+              },
+              "tssOutlet": {
+                "raw": "33",
+                "confidence": "high"
+              },
+              "residualChlorine": {
+                "raw": "0.7",
+                "confidence": "high"
+              },
+              "blowerHours": {
+                "raw": "6.0",
+                "confidence": "high"
+              },
+              "energyKwh": {
+                "raw": "49182",
+                "confidence": "high"
+              }
+            },
+            "remarks": null
+          },
+          {
+            "date": "2026-10-01",
+            "shift": "C",
+            "time": null,
+            "operator": "Mahesh",
+            "values": {
+              "inletFlow": 67,
+              "outletFlow": 64,
+              "phInlet": 7.1,
+              "phOutlet": 7.8,
+              "doAeration": 3.4,
+              "mlss": 3180,
+              "sv30": 413,
+              "codOutlet": 79,
+              "tssOutlet": 31,
+              "residualChlorine": 0.7,
+              "blowerHours": 8,
+              "energyKwh": 49261
+            },
+            "cellMeta": {
+              "inletFlow": {
+                "raw": "67",
+                "confidence": "high"
+              },
+              "outletFlow": {
+                "raw": "64",
+                "confidence": "high"
+              },
+              "phInlet": {
+                "raw": "7.1",
+                "confidence": "high"
+              },
+              "phOutlet": {
+                "raw": "7.8",
+                "confidence": "high"
+              },
+              "doAeration": {
+                "raw": "3.4",
+                "confidence": "high"
+              },
+              "mlss": {
+                "raw": "3180",
+                "confidence": "high"
+              },
+              "sv30": {
+                "raw": "413",
+                "confidence": "high"
+              },
+              "codOutlet": {
+                "raw": "79",
+                "confidence": "high"
+              },
+              "tssOutlet": {
+                "raw": "31",
+                "confidence": "high"
+              },
+              "residualChlorine": {
+                "raw": "0.7",
+                "confidence": "high"
+              },
+              "blowerHours": {
+                "raw": "8.0",
+                "confidence": "high"
+              },
+              "energyKwh": {
+                "raw": "49261",
+                "confidence": "high"
+              }
+            },
+            "remarks": null
+          }
+        ],
+        "unmappedColumns": [],
+        "notes": []
+      }
+    },
+    {
+      "file": "page-2.jpg",
+      "title": "Messy 3-shift STP page",
+      "description": "The same form, 2 to 5 Oct 2026. Two struck-through corrections, four blank cells, a night shift identical to the row before, one outlet TSS of 142, remarks in Hindi and Hinglish, a skewed photo and a coffee-ring stain.",
+      "plantKind": "STP",
+      "fallbackDate": "2026-10-02",
+      "rows": [
+        {
+          "date": "2026-10-02",
+          "shift": "A",
+          "time": null,
+          "operator": "Ramesh",
+          "values": {
+            "inletFlow": 76,
+            "outletFlow": 74,
+            "phInlet": 7.2,
+            "phOutlet": 7.2,
+            "doAeration": 2.5,
+            "mlss": 3100,
+            "sv30": 338,
+            "codOutlet": 61,
+            "bodOutlet": null,
+            "tssOutlet": 14,
+            "residualChlorine": 0.5,
+            "blowerHours": 7.5,
+            "energyKwh": 49510
+          },
+          "cellMeta": {},
+          "remarks": null
+        },
+        {
+          "date": "2026-10-02",
+          "shift": "B",
+          "time": null,
+          "operator": "Dinesh",
+          "values": {
+            "inletFlow": 92,
+            "outletFlow": 88,
+            "phInlet": 7,
+            "phOutlet": 7.8,
+            "doAeration": 2.3,
+            "mlss": 3060,
+            "sv30": 309,
+            "codOutlet": 87,
+            "bodOutlet": null,
+            "tssOutlet": 14,
+            "residualChlorine": 0.6,
+            "blowerHours": 6.5,
+            "energyKwh": 49600
+          },
+          "cellMeta": {},
+          "remarks": null
+        },
+        {
+          "date": "2026-10-02",
+          "shift": "C",
+          "time": null,
+          "operator": "Mahesh",
+          "values": {
+            "inletFlow": 77,
+            "outletFlow": 73,
+            "phInlet": 7.4,
+            "phOutlet": 7.7,
+            "doAeration": 1.9,
+            "mlss": 3130,
+            "sv30": null,
+            "codOutlet": 62,
+            "bodOutlet": null,
+            "tssOutlet": 36,
+            "residualChlorine": 0.4,
+            "blowerHours": 6,
+            "energyKwh": 49708
+          },
+          "cellMeta": {},
+          "remarks": null
+        },
+        {
+          "date": "2026-10-03",
+          "shift": "A",
+          "time": null,
+          "operator": "Ramesh",
+          "values": {
+            "inletFlow": 85,
+            "outletFlow": 82,
+            "phInlet": 7.5,
+            "phOutlet": 7.4,
+            "doAeration": 2,
+            "mlss": 3180,
+            "sv30": 302,
+            "codOutlet": 82,
+            "bodOutlet": null,
+            "tssOutlet": 25,
+            "residualChlorine": 0.8,
+            "blowerHours": 8,
+            "energyKwh": 49806
+          },
+          "cellMeta": {},
+          "remarks": "ब्लोअर 2 बंद रहा"
+        },
+        {
+          "date": "2026-10-03",
+          "shift": "B",
+          "time": null,
+          "operator": "Dinesh",
+          "values": {
+            "inletFlow": 76,
+            "outletFlow": 73,
+            "phInlet": 7.4,
+            "phOutlet": 7.3,
+            "doAeration": 2.6,
+            "mlss": 3100,
+            "sv30": 425,
+            "codOutlet": 98,
+            "bodOutlet": null,
+            "tssOutlet": 31,
+            "residualChlorine": 0.6,
+            "blowerHours": 6,
+            "energyKwh": 49921
+          },
+          "cellMeta": {},
+          "remarks": null
+        },
+        {
+          "date": "2026-10-03",
+          "shift": "C",
+          "time": null,
+          "operator": "Mahesh",
+          "values": {
+            "inletFlow": 76,
+            "outletFlow": 73,
+            "phInlet": 7.4,
+            "phOutlet": 7.3,
+            "doAeration": 2.6,
+            "mlss": 3100,
+            "sv30": 425,
+            "codOutlet": 98,
+            "bodOutlet": null,
+            "tssOutlet": 31,
+            "residualChlorine": 0.6,
+            "blowerHours": 6,
+            "energyKwh": 50031
+          },
+          "cellMeta": {},
+          "remarks": null
+        },
+        {
+          "date": "2026-10-04",
+          "shift": "A",
+          "time": null,
+          "operator": "Ramesh",
+          "values": {
+            "inletFlow": 96,
+            "outletFlow": 91,
+            "phInlet": 7.6,
+            "phOutlet": 7.4,
+            "doAeration": 3.4,
+            "mlss": 3090,
+            "sv30": 324,
+            "codOutlet": 85,
+            "bodOutlet": null,
+            "tssOutlet": 36,
+            "residualChlorine": null,
+            "blowerHours": 6,
+            "energyKwh": 50127
+          },
+          "cellMeta": {},
+          "remarks": null
+        },
+        {
+          "date": "2026-10-04",
+          "shift": "B",
+          "time": null,
+          "operator": "Dinesh",
+          "values": {
+            "inletFlow": 95,
+            "outletFlow": 89,
+            "phInlet": 7,
+            "phOutlet": 7.3,
+            "doAeration": 2.8,
+            "mlss": 3040,
+            "sv30": 416,
+            "codOutlet": 57,
+            "bodOutlet": null,
+            "tssOutlet": 142,
+            "residualChlorine": 0.5,
+            "blowerHours": 6.5,
+            "energyKwh": 50201
+          },
+          "cellMeta": {},
+          "remarks": "sludge zyada tha"
+        },
+        {
+          "date": "2026-10-04",
+          "shift": "C",
+          "time": null,
+          "operator": "Mahesh",
+          "values": {
+            "inletFlow": 60,
+            "outletFlow": 57,
+            "phInlet": 7.2,
+            "phOutlet": 7.6,
+            "doAeration": 2.2,
+            "mlss": 3060,
+            "sv30": 355,
+            "codOutlet": null,
+            "bodOutlet": null,
+            "tssOutlet": 26,
+            "residualChlorine": 0.5,
+            "blowerHours": 6.5,
+            "energyKwh": 50301
+          },
+          "cellMeta": {},
+          "remarks": null
+        },
+        {
+          "date": "2026-10-05",
+          "shift": "A",
+          "time": null,
+          "operator": "Ramesh",
+          "values": {
+            "inletFlow": 95,
+            "outletFlow": 90,
+            "phInlet": 7.3,
+            "phOutlet": 7.6,
+            "doAeration": 2.4,
+            "mlss": 2970,
+            "sv30": 279,
+            "codOutlet": 52,
+            "bodOutlet": 22,
+            "tssOutlet": 26,
+            "residualChlorine": 0.4,
+            "blowerHours": 6,
+            "energyKwh": 50412
+          },
+          "cellMeta": {},
+          "remarks": null
+        },
+        {
+          "date": "2026-10-05",
+          "shift": "B",
+          "time": null,
+          "operator": "Dinesh",
+          "values": {
+            "inletFlow": 81,
+            "outletFlow": 77,
+            "phInlet": 7.3,
+            "phOutlet": 7.4,
+            "doAeration": 3.3,
+            "mlss": 3000,
+            "sv30": 357,
+            "codOutlet": 82,
+            "bodOutlet": null,
+            "tssOutlet": 25,
+            "residualChlorine": 0.7,
+            "blowerHours": 8,
+            "energyKwh": 50497
+          },
+          "cellMeta": {},
+          "remarks": null
+        },
+        {
+          "date": "2026-10-05",
+          "shift": "C",
+          "time": null,
+          "operator": "Mahesh",
+          "values": {
+            "inletFlow": 77,
+            "outletFlow": 74,
+            "phInlet": 7.4,
+            "phOutlet": 7.5,
+            "doAeration": 1.8,
+            "mlss": 2910,
+            "sv30": 346,
+            "codOutlet": 98,
+            "bodOutlet": null,
+            "tssOutlet": 35,
+            "residualChlorine": 0.8,
+            "blowerHours": null,
+            "energyKwh": 50591
+          },
+          "cellMeta": {},
+          "remarks": null
+        }
+      ],
+      "plant": "shift",
+      "recorded": {
+        "model": "gemini-3.5-flash",
+        "recordedOn": "2026-10-04",
+        "label": "Reading recorded on 4 Oct 2026 from gemini-3.5-flash",
+        "rows": [
+          {
+            "date": "2026-10-02",
+            "shift": "A",
+            "time": null,
+            "operator": "Ramesh",
+            "values": {
+              "inletFlow": 76,
+              "outletFlow": 74,
+              "phInlet": 7.2,
+              "phOutlet": 7.2,
+              "doAeration": 2.5,
+              "mlss": 3100,
+              "sv30": 338,
+              "codOutlet": 61,
+              "tssOutlet": 14,
+              "residualChlorine": 0.5,
+              "blowerHours": 7.5,
+              "energyKwh": 49510
+            },
+            "cellMeta": {
+              "inletFlow": {
+                "raw": "76",
+                "confidence": "high"
+              },
+              "outletFlow": {
+                "raw": "74",
+                "confidence": "high"
+              },
+              "phInlet": {
+                "raw": "7.2",
+                "confidence": "high"
+              },
+              "phOutlet": {
+                "raw": "7.2",
+                "confidence": "high"
+              },
+              "doAeration": {
+                "raw": "2.5",
+                "confidence": "high"
+              },
+              "mlss": {
+                "raw": "3100",
+                "confidence": "high"
+              },
+              "sv30": {
+                "raw": "338",
+                "confidence": "high"
+              },
+              "codOutlet": {
+                "raw": "61",
+                "confidence": "high"
+              },
+              "tssOutlet": {
+                "raw": "14",
+                "confidence": "high"
+              },
+              "residualChlorine": {
+                "raw": "0.5",
+                "confidence": "high"
+              },
+              "blowerHours": {
+                "raw": "7.5",
+                "confidence": "high"
+              },
+              "energyKwh": {
+                "raw": "49510",
+                "confidence": "high"
+              }
+            },
+            "remarks": null
+          },
+          {
+            "date": "2026-10-02",
+            "shift": "B",
+            "time": null,
+            "operator": "Dinesh",
+            "values": {
+              "inletFlow": 92,
+              "outletFlow": 88,
+              "phInlet": 7,
+              "phOutlet": 7.8,
+              "doAeration": 2.3,
+              "mlss": 3060,
+              "sv30": 309,
+              "codOutlet": 87,
+              "tssOutlet": 14,
+              "residualChlorine": 0.6,
+              "blowerHours": 6.5,
+              "energyKwh": 49600
+            },
+            "cellMeta": {
+              "inletFlow": {
+                "raw": "92",
+                "confidence": "high"
+              },
+              "outletFlow": {
+                "raw": "88",
+                "confidence": "high"
+              },
+              "phInlet": {
+                "raw": "7.0",
+                "confidence": "high"
+              },
+              "phOutlet": {
+                "raw": "7.8",
+                "confidence": "high"
+              },
+              "doAeration": {
+                "raw": "2.3",
+                "confidence": "low"
+              },
+              "mlss": {
+                "raw": "3060",
+                "confidence": "high"
+              },
+              "sv30": {
+                "raw": "309",
+                "confidence": "high"
+              },
+              "codOutlet": {
+                "raw": "87",
+                "confidence": "high"
+              },
+              "tssOutlet": {
+                "raw": "14",
+                "confidence": "high"
+              },
+              "residualChlorine": {
+                "raw": "0.6",
+                "confidence": "high"
+              },
+              "blowerHours": {
+                "raw": "6.5",
+                "confidence": "high"
+              },
+              "energyKwh": {
+                "raw": "49600",
+                "confidence": "high"
+              }
+            },
+            "remarks": null
+          },
+          {
+            "date": "2026-10-02",
+            "shift": "C",
+            "time": null,
+            "operator": "Mahesh",
+            "values": {
+              "inletFlow": 77,
+              "outletFlow": 73,
+              "phInlet": 7.4,
+              "phOutlet": 7.7,
+              "doAeration": 1.9,
+              "mlss": 3130,
+              "codOutlet": 62,
+              "tssOutlet": 36,
+              "residualChlorine": 0.4,
+              "blowerHours": 6,
+              "energyKwh": 49708
+            },
+            "cellMeta": {
+              "inletFlow": {
+                "raw": "77",
+                "confidence": "high"
+              },
+              "outletFlow": {
+                "raw": "73",
+                "confidence": "high"
+              },
+              "phInlet": {
+                "raw": "7.4",
+                "confidence": "high"
+              },
+              "phOutlet": {
+                "raw": "7.7",
+                "confidence": "high"
+              },
+              "doAeration": {
+                "raw": "1.9",
+                "confidence": "high"
+              },
+              "mlss": {
+                "raw": "3130",
+                "confidence": "high"
+              },
+              "codOutlet": {
+                "raw": "62",
+                "confidence": "high"
+              },
+              "tssOutlet": {
+                "raw": "36",
+                "confidence": "high"
+              },
+              "residualChlorine": {
+                "raw": "0.4",
+                "confidence": "high"
+              },
+              "blowerHours": {
+                "raw": "6.0",
+                "confidence": "high"
+              },
+              "energyKwh": {
+                "raw": "49708",
+                "confidence": "high"
+              }
+            },
+            "remarks": null
+          },
+          {
+            "date": "2026-10-03",
+            "shift": "A",
+            "time": null,
+            "operator": "Ramesh",
+            "values": {
+              "inletFlow": 85,
+              "outletFlow": 82,
+              "phInlet": 7.5,
+              "phOutlet": 7.4,
+              "doAeration": 2,
+              "mlss": 3180,
+              "sv30": 302,
+              "codOutlet": 82,
+              "tssOutlet": 25,
+              "residualChlorine": 0.8,
+              "blowerHours": 8,
+              "energyKwh": 49806
+            },
+            "cellMeta": {
+              "inletFlow": {
+                "raw": "85",
+                "confidence": "high"
+              },
+              "outletFlow": {
+                "raw": "82",
+                "confidence": "high"
+              },
+              "phInlet": {
+                "raw": "7.5",
+                "confidence": "high"
+              },
+              "phOutlet": {
+                "raw": "7.4",
+                "confidence": "high"
+              },
+              "doAeration": {
+                "raw": "2.0",
+                "confidence": "high"
+              },
+              "mlss": {
+                "raw": "3180",
+                "confidence": "high"
+              },
+              "sv30": {
+                "raw": "302",
+                "confidence": "high"
+              },
+              "codOutlet": {
+                "raw": "82",
+                "confidence": "high"
+              },
+              "tssOutlet": {
+                "raw": "25",
+                "confidence": "high"
+              },
+              "residualChlorine": {
+                "raw": "0.8",
+                "confidence": "high"
+              },
+              "blowerHours": {
+                "raw": "8.0",
+                "confidence": "high"
+              },
+              "energyKwh": {
+                "raw": "49806",
+                "confidence": "high"
+              }
+            },
+            "remarks": "ब्लोअर 2 बंद रहा"
+          },
+          {
+            "date": "2026-10-03",
+            "shift": "B",
+            "time": null,
+            "operator": "Dinesh",
+            "values": {
+              "inletFlow": 76,
+              "outletFlow": 73,
+              "phInlet": 7.4,
+              "phOutlet": 7.3,
+              "doAeration": 2.6,
+              "mlss": 3100,
+              "sv30": 425,
+              "codOutlet": 98,
+              "tssOutlet": 31,
+              "residualChlorine": 0.6,
+              "blowerHours": 6,
+              "energyKwh": 49921
+            },
+            "cellMeta": {
+              "inletFlow": {
+                "raw": "76",
+                "confidence": "high"
+              },
+              "outletFlow": {
+                "raw": "73",
+                "confidence": "high"
+              },
+              "phInlet": {
+                "raw": "7.4",
+                "confidence": "high"
+              },
+              "phOutlet": {
+                "raw": "7.3",
+                "confidence": "high"
+              },
+              "doAeration": {
+                "raw": "2.6",
+                "confidence": "high"
+              },
+              "mlss": {
+                "raw": "3100",
+                "confidence": "high"
+              },
+              "sv30": {
+                "raw": "425",
+                "confidence": "high"
+              },
+              "codOutlet": {
+                "raw": "98",
+                "confidence": "high"
+              },
+              "tssOutlet": {
+                "raw": "31",
+                "confidence": "high"
+              },
+              "residualChlorine": {
+                "raw": "0.6",
+                "confidence": "high"
+              },
+              "blowerHours": {
+                "raw": "6.0",
+                "confidence": "high"
+              },
+              "energyKwh": {
+                "raw": "49921",
+                "confidence": "high"
+              }
+            },
+            "remarks": null
+          },
+          {
+            "date": "2026-10-03",
+            "shift": "C",
+            "time": null,
+            "operator": "Mahesh",
+            "values": {
+              "inletFlow": 76,
+              "outletFlow": 73,
+              "phInlet": 7.4,
+              "phOutlet": 7.3,
+              "doAeration": 2.6,
+              "mlss": 3100,
+              "sv30": 425,
+              "codOutlet": 98,
+              "tssOutlet": 31,
+              "residualChlorine": 0.6,
+              "blowerHours": 6,
+              "energyKwh": 50031
+            },
+            "cellMeta": {
+              "inletFlow": {
+                "raw": "76",
+                "confidence": "high"
+              },
+              "outletFlow": {
+                "raw": "73",
+                "confidence": "high"
+              },
+              "phInlet": {
+                "raw": "7.4",
+                "confidence": "high"
+              },
+              "phOutlet": {
+                "raw": "7.3",
+                "confidence": "high"
+              },
+              "doAeration": {
+                "raw": "2.6",
+                "confidence": "high"
+              },
+              "mlss": {
+                "raw": "3100",
+                "confidence": "high"
+              },
+              "sv30": {
+                "raw": "425",
+                "confidence": "high"
+              },
+              "codOutlet": {
+                "raw": "98",
+                "confidence": "high"
+              },
+              "tssOutlet": {
+                "raw": "31",
+                "confidence": "high"
+              },
+              "residualChlorine": {
+                "raw": "0.6",
+                "confidence": "high"
+              },
+              "blowerHours": {
+                "raw": "6.0",
+                "confidence": "high"
+              },
+              "energyKwh": {
+                "raw": "50031",
+                "confidence": "high"
+              }
+            },
+            "remarks": null
+          },
+          {
+            "date": "2026-10-04",
+            "shift": "A",
+            "time": null,
+            "operator": "Ramesh",
+            "values": {
+              "inletFlow": 96,
+              "outletFlow": 91,
+              "phInlet": 7.6,
+              "phOutlet": 7.4,
+              "doAeration": 3.4,
+              "mlss": 3090,
+              "sv30": 324,
+              "codOutlet": 85,
+              "tssOutlet": 36,
+              "blowerHours": 6,
+              "energyKwh": 50127
+            },
+            "cellMeta": {
+              "inletFlow": {
+                "raw": "96",
+                "confidence": "high"
+              },
+              "outletFlow": {
+                "raw": "91",
+                "confidence": "high"
+              },
+              "phInlet": {
+                "raw": "7.6",
+                "confidence": "high"
+              },
+              "phOutlet": {
+                "raw": "7.4",
+                "confidence": "high"
+              },
+              "doAeration": {
+                "raw": "3.4",
+                "confidence": "high"
+              },
+              "mlss": {
+                "raw": "3090",
+                "confidence": "high"
+              },
+              "sv30": {
+                "raw": "324",
+                "confidence": "high"
+              },
+              "codOutlet": {
+                "raw": "85",
+                "confidence": "high"
+              },
+              "tssOutlet": {
+                "raw": "36",
+                "confidence": "high"
+              },
+              "blowerHours": {
+                "raw": "6.0",
+                "confidence": "high"
+              },
+              "energyKwh": {
+                "raw": "50127",
+                "confidence": "high"
+              }
+            },
+            "remarks": null
+          },
+          {
+            "date": "2026-10-04",
+            "shift": "B",
+            "time": null,
+            "operator": "Dinesh",
+            "values": {
+              "inletFlow": 95,
+              "outletFlow": 89,
+              "phInlet": 7,
+              "phOutlet": 7.3,
+              "doAeration": 2.8,
+              "mlss": 3040,
+              "sv30": 416,
+              "codOutlet": 57,
+              "tssOutlet": 142,
+              "residualChlorine": 0.5,
+              "blowerHours": 6.5,
+              "energyKwh": 50201
+            },
+            "cellMeta": {
+              "inletFlow": {
+                "raw": "95",
+                "confidence": "high"
+              },
+              "outletFlow": {
+                "raw": "89",
+                "confidence": "high"
+              },
+              "phInlet": {
+                "raw": "7.0",
+                "confidence": "high"
+              },
+              "phOutlet": {
+                "raw": "7.3",
+                "confidence": "high"
+              },
+              "doAeration": {
+                "raw": "2.8",
+                "confidence": "high"
+              },
+              "mlss": {
+                "raw": "3040",
+                "confidence": "high"
+              },
+              "sv30": {
+                "raw": "416",
+                "confidence": "high"
+              },
+              "codOutlet": {
+                "raw": "57",
+                "confidence": "high"
+              },
+              "tssOutlet": {
+                "raw": "142",
+                "confidence": "high"
+              },
+              "residualChlorine": {
+                "raw": "0.5",
+                "confidence": "high"
+              },
+              "blowerHours": {
+                "raw": "6.5",
+                "confidence": "high"
+              },
+              "energyKwh": {
+                "raw": "50201",
+                "confidence": "high"
+              }
+            },
+            "remarks": "sludge zyada tha"
+          },
+          {
+            "date": "2026-10-04",
+            "shift": "C",
+            "time": null,
+            "operator": "Mahesh",
+            "values": {
+              "inletFlow": 60,
+              "outletFlow": 57,
+              "phInlet": 7.2,
+              "phOutlet": 7.6,
+              "doAeration": 2.2,
+              "mlss": 3060,
+              "sv30": 355,
+              "tssOutlet": 26,
+              "residualChlorine": 0.5,
+              "blowerHours": 6.5,
+              "energyKwh": 50301
+            },
+            "cellMeta": {
+              "inletFlow": {
+                "raw": "60",
+                "confidence": "high"
+              },
+              "outletFlow": {
+                "raw": "57",
+                "confidence": "high"
+              },
+              "phInlet": {
+                "raw": "7.2",
+                "confidence": "high"
+              },
+              "phOutlet": {
+                "raw": "7.6",
+                "confidence": "high"
+              },
+              "doAeration": {
+                "raw": "2.2",
+                "confidence": "high"
+              },
+              "mlss": {
+                "raw": "3060",
+                "confidence": "high"
+              },
+              "sv30": {
+                "raw": "355",
+                "confidence": "high"
+              },
+              "tssOutlet": {
+                "raw": "26",
+                "confidence": "high"
+              },
+              "residualChlorine": {
+                "raw": "0.5",
+                "confidence": "high"
+              },
+              "blowerHours": {
+                "raw": "6.5",
+                "confidence": "high"
+              },
+              "energyKwh": {
+                "raw": "50301",
+                "confidence": "high"
+              }
+            },
+            "remarks": null
+          },
+          {
+            "date": "2026-10-05",
+            "shift": "A",
+            "time": null,
+            "operator": "Ramesh",
+            "values": {
+              "inletFlow": 95,
+              "outletFlow": 90,
+              "phInlet": 7.3,
+              "phOutlet": 7.6,
+              "doAeration": 2.4,
+              "mlss": 2970,
+              "sv30": 279,
+              "codOutlet": 52,
+              "bodOutlet": 22,
+              "tssOutlet": 26,
+              "residualChlorine": 0.4,
+              "blowerHours": 6,
+              "energyKwh": 50412
+            },
+            "cellMeta": {
+              "inletFlow": {
+                "raw": "95",
+                "confidence": "high"
+              },
+              "outletFlow": {
+                "raw": "90",
+                "confidence": "high"
+              },
+              "phInlet": {
+                "raw": "7.3",
+                "confidence": "high"
+              },
+              "phOutlet": {
+                "raw": "7.6",
+                "confidence": "high"
+              },
+              "doAeration": {
+                "raw": "2.4",
+                "confidence": "high"
+              },
+              "mlss": {
+                "raw": "2970",
+                "confidence": "high"
+              },
+              "sv30": {
+                "raw": "279",
+                "confidence": "high"
+              },
+              "codOutlet": {
+                "raw": "52",
+                "confidence": "high"
+              },
+              "bodOutlet": {
+                "raw": "22",
+                "confidence": "high"
+              },
+              "tssOutlet": {
+                "raw": "26",
+                "confidence": "high"
+              },
+              "residualChlorine": {
+                "raw": "0.4",
+                "confidence": "high"
+              },
+              "blowerHours": {
+                "raw": "6.0",
+                "confidence": "high"
+              },
+              "energyKwh": {
+                "raw": "50412",
+                "confidence": "high"
+              }
+            },
+            "remarks": null
+          },
+          {
+            "date": "2026-10-05",
+            "shift": "B",
+            "time": null,
+            "operator": "Dinesh",
+            "values": {
+              "inletFlow": 81,
+              "outletFlow": 77,
+              "phInlet": 7.3,
+              "phOutlet": 7.4,
+              "doAeration": 3.3,
+              "mlss": 3000,
+              "sv30": 357,
+              "codOutlet": 82,
+              "tssOutlet": 25,
+              "residualChlorine": 0.7,
+              "blowerHours": 8,
+              "energyKwh": 50497
+            },
+            "cellMeta": {
+              "inletFlow": {
+                "raw": "81",
+                "confidence": "high"
+              },
+              "outletFlow": {
+                "raw": "77",
+                "confidence": "high"
+              },
+              "phInlet": {
+                "raw": "7.3",
+                "confidence": "high"
+              },
+              "phOutlet": {
+                "raw": "7.4",
+                "confidence": "low"
+              },
+              "doAeration": {
+                "raw": "3.3",
+                "confidence": "high"
+              },
+              "mlss": {
+                "raw": "3000",
+                "confidence": "high"
+              },
+              "sv30": {
+                "raw": "357",
+                "confidence": "high"
+              },
+              "codOutlet": {
+                "raw": "82",
+                "confidence": "high"
+              },
+              "tssOutlet": {
+                "raw": "25",
+                "confidence": "high"
+              },
+              "residualChlorine": {
+                "raw": "0.7",
+                "confidence": "high"
+              },
+              "blowerHours": {
+                "raw": "8.0",
+                "confidence": "high"
+              },
+              "energyKwh": {
+                "raw": "50497",
+                "confidence": "high"
+              }
+            },
+            "remarks": null
+          },
+          {
+            "date": "2026-10-05",
+            "shift": "C",
+            "time": null,
+            "operator": "Mahesh",
+            "values": {
+              "inletFlow": 77,
+              "outletFlow": 74,
+              "phInlet": 7.4,
+              "phOutlet": 7.5,
+              "doAeration": 1.8,
+              "mlss": 2910,
+              "sv30": 346,
+              "codOutlet": 98,
+              "tssOutlet": 35,
+              "residualChlorine": 0.8,
+              "energyKwh": 50591
+            },
+            "cellMeta": {
+              "inletFlow": {
+                "raw": "77",
+                "confidence": "high"
+              },
+              "outletFlow": {
+                "raw": "74",
+                "confidence": "high"
+              },
+              "phInlet": {
+                "raw": "7.4",
+                "confidence": "high"
+              },
+              "phOutlet": {
+                "raw": "7.5",
+                "confidence": "high"
+              },
+              "doAeration": {
+                "raw": "1.8",
+                "confidence": "high"
+              },
+              "mlss": {
+                "raw": "2910",
+                "confidence": "high"
+              },
+              "sv30": {
+                "raw": "346",
+                "confidence": "high"
+              },
+              "codOutlet": {
+                "raw": "98",
+                "confidence": "high"
+              },
+              "tssOutlet": {
+                "raw": "35",
+                "confidence": "high"
+              },
+              "residualChlorine": {
+                "raw": "0.8",
+                "confidence": "high"
+              },
+              "energyKwh": {
+                "raw": "50591",
+                "confidence": "high"
+              }
+            },
+            "remarks": null
+          }
+        ],
+        "unmappedColumns": [],
+        "notes": [
+          "On 02/10/26 Shift B, DO Aeration value has a correction or strike-through, transcribed as 2.3 with low confidence.",
+          "On 05/10/26 Shift B, pH Outlet has a correction or strike-through, transcribed as 7.4 with low confidence."
+        ]
+      }
+    },
+    {
+      "file": "page-3.jpg",
+      "title": "Different layout, Sample Hospital STP",
+      "description": "Sample Hospital STP, 100 KLD. Portrait page, 8 rows, readings at 08:00 and 20:00, 29 Sep to 2 Oct 2026. Columns are worded and ordered differently, with a sludge-volume column JalLog does not track and a signature column. It is another plant's page: use it to try the reader, then discard it.",
+      "plantKind": "STP",
+      "fallbackDate": "2026-09-29",
+      "rows": [
+        {
+          "date": "2026-09-29",
+          "shift": null,
+          "time": "08:00",
+          "operator": null,
+          "values": {
+            "outletFlow": 49,
+            "phInlet": 7.1,
+            "phOutlet": 7.5,
+            "doAeration": 2.3,
+            "mlss": 3050,
+            "residualChlorine": 0.7,
+            "blowerHours": 6
+          },
+          "cellMeta": {},
+          "remarks": null
+        },
+        {
+          "date": "2026-09-29",
+          "shift": null,
+          "time": "20:00",
+          "operator": null,
+          "values": {
+            "outletFlow": 42,
+            "phInlet": 7.3,
+            "phOutlet": 7.4,
+            "doAeration": 2.8,
+            "mlss": 3000,
+            "residualChlorine": 0.6,
+            "blowerHours": 5.5
+          },
+          "cellMeta": {},
+          "remarks": null
+        },
+        {
+          "date": "2026-09-30",
+          "shift": null,
+          "time": "08:00",
+          "operator": null,
+          "values": {
+            "outletFlow": 44,
+            "phInlet": 7.3,
+            "phOutlet": 7.4,
+            "doAeration": 2.3,
+            "mlss": 2920,
+            "residualChlorine": 0.7,
+            "blowerHours": 6.5
+          },
+          "cellMeta": {},
+          "remarks": null
+        },
+        {
+          "date": "2026-09-30",
+          "shift": null,
+          "time": "20:00",
+          "operator": null,
+          "values": {
+            "outletFlow": 39,
+            "phInlet": 7.4,
+            "phOutlet": 7.4,
+            "doAeration": 1.8,
+            "mlss": 2880,
+            "residualChlorine": 0.4,
+            "blowerHours": 6.5
+          },
+          "cellMeta": {},
+          "remarks": null
+        },
+        {
+          "date": "2026-10-01",
+          "shift": null,
+          "time": "08:00",
+          "operator": null,
+          "values": {
+            "outletFlow": 52,
+            "phInlet": 7.3,
+            "phOutlet": 7.4,
+            "doAeration": 2.1,
+            "mlss": 2920,
+            "residualChlorine": 0.6,
+            "blowerHours": 8
+          },
+          "cellMeta": {},
+          "remarks": null
+        },
+        {
+          "date": "2026-10-01",
+          "shift": null,
+          "time": "20:00",
+          "operator": null,
+          "values": {
+            "outletFlow": 35,
+            "phInlet": 7,
+            "phOutlet": 7.7,
+            "doAeration": 3,
+            "mlss": 2860,
+            "residualChlorine": 0.6,
+            "blowerHours": 8
+          },
+          "cellMeta": {},
+          "remarks": null
+        },
+        {
+          "date": "2026-10-02",
+          "shift": null,
+          "time": "08:00",
+          "operator": null,
+          "values": {
+            "outletFlow": 35,
+            "phInlet": 7.3,
+            "phOutlet": 7.4,
+            "doAeration": 2.7,
+            "mlss": 2930,
+            "residualChlorine": 0.7,
+            "blowerHours": 7
+          },
+          "cellMeta": {},
+          "remarks": null
+        },
+        {
+          "date": "2026-10-02",
+          "shift": null,
+          "time": "20:00",
+          "operator": null,
+          "values": {
+            "outletFlow": 45,
+            "phInlet": 7.5,
+            "phOutlet": 7.8,
+            "doAeration": 1.9,
+            "mlss": 3000,
+            "residualChlorine": 0.7,
+            "blowerHours": 8
+          },
+          "cellMeta": {},
+          "remarks": null
+        }
+      ],
+      "plant": "shift",
+      "recorded": {
+        "model": "gemini-3.5-flash",
+        "recordedOn": "2026-10-04",
+        "label": "Reading recorded on 4 Oct 2026 from gemini-3.5-flash",
+        "rows": [
+          {
+            "date": "2026-09-29",
+            "shift": null,
+            "time": "08:00",
+            "operator": null,
+            "values": {
+              "outletFlow": 49,
+              "phInlet": 7.1,
+              "phOutlet": 7.5,
+              "doAeration": 2.3,
+              "mlss": 3050,
+              "residualChlorine": 0.7,
+              "blowerHours": 6
+            },
+            "cellMeta": {
+              "outletFlow": {
+                "raw": "49",
+                "confidence": "high"
+              },
+              "phInlet": {
+                "raw": "7.1",
+                "confidence": "high"
+              },
+              "phOutlet": {
+                "raw": "7.5",
+                "confidence": "high"
+              },
+              "doAeration": {
+                "raw": "2.3",
+                "confidence": "high"
+              },
+              "mlss": {
+                "raw": "3050",
+                "confidence": "high"
+              },
+              "residualChlorine": {
+                "raw": "0.7",
+                "confidence": "high"
+              },
+              "blowerHours": {
+                "raw": "6.0",
+                "confidence": "high"
+              }
+            },
+            "remarks": null
+          },
+          {
+            "date": "2026-09-29",
+            "shift": null,
+            "time": "20:00",
+            "operator": null,
+            "values": {
+              "outletFlow": 42,
+              "phInlet": 7.3,
+              "phOutlet": 7.4,
+              "doAeration": 2.8,
+              "mlss": 3000,
+              "residualChlorine": 0.6,
+              "blowerHours": 5.5
+            },
+            "cellMeta": {
+              "outletFlow": {
+                "raw": "42",
+                "confidence": "high"
+              },
+              "phInlet": {
+                "raw": "7.3",
+                "confidence": "high"
+              },
+              "phOutlet": {
+                "raw": "7.4",
+                "confidence": "high"
+              },
+              "doAeration": {
+                "raw": "2.8",
+                "confidence": "high"
+              },
+              "mlss": {
+                "raw": "3000",
+                "confidence": "high"
+              },
+              "residualChlorine": {
+                "raw": "0.6",
+                "confidence": "high"
+              },
+              "blowerHours": {
+                "raw": "5.5",
+                "confidence": "low"
+              }
+            },
+            "remarks": null
+          },
+          {
+            "date": "2026-09-30",
+            "shift": null,
+            "time": "08:00",
+            "operator": null,
+            "values": {
+              "outletFlow": 44,
+              "phInlet": 7.3,
+              "phOutlet": 7.4,
+              "doAeration": 2.3,
+              "mlss": 2920,
+              "residualChlorine": 0.7,
+              "blowerHours": 6.5
+            },
+            "cellMeta": {
+              "outletFlow": {
+                "raw": "44",
+                "confidence": "high"
+              },
+              "phInlet": {
+                "raw": "7.3",
+                "confidence": "high"
+              },
+              "phOutlet": {
+                "raw": "7.4",
+                "confidence": "high"
+              },
+              "doAeration": {
+                "raw": "2.3",
+                "confidence": "high"
+              },
+              "mlss": {
+                "raw": "2920",
+                "confidence": "high"
+              },
+              "residualChlorine": {
+                "raw": "0.7",
+                "confidence": "high"
+              },
+              "blowerHours": {
+                "raw": "6.5",
+                "confidence": "high"
+              }
+            },
+            "remarks": null
+          },
+          {
+            "date": "2026-09-30",
+            "shift": null,
+            "time": "20:00",
+            "operator": null,
+            "values": {
+              "outletFlow": 39,
+              "phInlet": 7.4,
+              "phOutlet": 7.4,
+              "doAeration": 1.8,
+              "mlss": 2880,
+              "residualChlorine": 0.4,
+              "blowerHours": 6.5
+            },
+            "cellMeta": {
+              "outletFlow": {
+                "raw": "39",
+                "confidence": "high"
+              },
+              "phInlet": {
+                "raw": "7.4",
+                "confidence": "high"
+              },
+              "phOutlet": {
+                "raw": "7.4",
+                "confidence": "high"
+              },
+              "doAeration": {
+                "raw": "1.8",
+                "confidence": "high"
+              },
+              "mlss": {
+                "raw": "2880",
+                "confidence": "high"
+              },
+              "residualChlorine": {
+                "raw": "0.4",
+                "confidence": "high"
+              },
+              "blowerHours": {
+                "raw": "6.5",
+                "confidence": "high"
+              }
+            },
+            "remarks": null
+          },
+          {
+            "date": "2026-10-01",
+            "shift": null,
+            "time": "08:00",
+            "operator": null,
+            "values": {
+              "outletFlow": 52,
+              "phInlet": 7.3,
+              "phOutlet": 7.4,
+              "doAeration": 2.1,
+              "mlss": 2920,
+              "residualChlorine": 0.6,
+              "blowerHours": 8
+            },
+            "cellMeta": {
+              "outletFlow": {
+                "raw": "52",
+                "confidence": "high"
+              },
+              "phInlet": {
+                "raw": "7.3",
+                "confidence": "high"
+              },
+              "phOutlet": {
+                "raw": "7.4",
+                "confidence": "high"
+              },
+              "doAeration": {
+                "raw": "2.1",
+                "confidence": "high"
+              },
+              "mlss": {
+                "raw": "2920",
+                "confidence": "high"
+              },
+              "residualChlorine": {
+                "raw": "0.6",
+                "confidence": "high"
+              },
+              "blowerHours": {
+                "raw": "8.0",
+                "confidence": "high"
+              }
+            },
+            "remarks": null
+          },
+          {
+            "date": "2026-10-01",
+            "shift": null,
+            "time": "20:00",
+            "operator": null,
+            "values": {
+              "outletFlow": 35,
+              "phInlet": 7,
+              "phOutlet": 7.7,
+              "doAeration": 3,
+              "mlss": 2860,
+              "residualChlorine": 0.6,
+              "blowerHours": 8
+            },
+            "cellMeta": {
+              "outletFlow": {
+                "raw": "35",
+                "confidence": "high"
+              },
+              "phInlet": {
+                "raw": "7.0",
+                "confidence": "high"
+              },
+              "phOutlet": {
+                "raw": "7.7",
+                "confidence": "high"
+              },
+              "doAeration": {
+                "raw": "3.0",
+                "confidence": "high"
+              },
+              "mlss": {
+                "raw": "2860",
+                "confidence": "high"
+              },
+              "residualChlorine": {
+                "raw": "0.6",
+                "confidence": "high"
+              },
+              "blowerHours": {
+                "raw": "8.0",
+                "confidence": "high"
+              }
+            },
+            "remarks": null
+          },
+          {
+            "date": "2026-10-02",
+            "shift": null,
+            "time": "08:00",
+            "operator": null,
+            "values": {
+              "outletFlow": 35,
+              "phInlet": 7.3,
+              "phOutlet": 7.4,
+              "doAeration": 2.7,
+              "mlss": 2930,
+              "residualChlorine": 0.7,
+              "blowerHours": 7
+            },
+            "cellMeta": {
+              "outletFlow": {
+                "raw": "35",
+                "confidence": "high"
+              },
+              "phInlet": {
+                "raw": "7.3",
+                "confidence": "high"
+              },
+              "phOutlet": {
+                "raw": "7.4",
+                "confidence": "high"
+              },
+              "doAeration": {
+                "raw": "2.7",
+                "confidence": "high"
+              },
+              "mlss": {
+                "raw": "2930",
+                "confidence": "high"
+              },
+              "residualChlorine": {
+                "raw": "0.7",
+                "confidence": "high"
+              },
+              "blowerHours": {
+                "raw": "7.0",
+                "confidence": "high"
+              }
+            },
+            "remarks": null
+          },
+          {
+            "date": "2026-10-02",
+            "shift": null,
+            "time": "20:00",
+            "operator": null,
+            "values": {
+              "outletFlow": 45,
+              "phInlet": 7.5,
+              "phOutlet": 7.8,
+              "doAeration": 1.9,
+              "mlss": 3000,
+              "residualChlorine": 0.7,
+              "blowerHours": 8
+            },
+            "cellMeta": {
+              "outletFlow": {
+                "raw": "45",
+                "confidence": "high"
+              },
+              "phInlet": {
+                "raw": "7.5",
+                "confidence": "high"
+              },
+              "phOutlet": {
+                "raw": "7.8",
+                "confidence": "high"
+              },
+              "doAeration": {
+                "raw": "1.9",
+                "confidence": "high"
+              },
+              "mlss": {
+                "raw": "3000",
+                "confidence": "high"
+              },
+              "residualChlorine": {
+                "raw": "0.7",
+                "confidence": "high"
+              },
+              "blowerHours": {
+                "raw": "8.0",
+                "confidence": "high"
+              }
+            },
+            "remarks": null
+          }
+        ],
+        "unmappedColumns": [
+          "Sludge Wasted (L)"
+        ],
+        "notes": [
+          "The column 'Flow Meter Reading - Treated Water (m3/shift)' represents the volume of treated water discharged per shift, mapped to outletFlow.",
+          "The column 'Sludge Wasted (L)' is in Litres (volume) and does not map to sludgeKg (mass), so it is listed in unmappedColumns."
+        ]
+      }
+    },
+    {
+      "file": "page-4.jpg",
+      "title": "One row a day, small plant meter register",
+      "description": "Sample Clinic STP, 10 KLD. One row a day, 21 Sep to 4 Oct 2026, no shifts and no lab values: flow meter readings, plant start and close time, lime, alum and chlorine dosing (written in g or kg), energy meter start and close readings, sludge, and a signature. Dates are written D-M-YY and one digit is overwritten. Written into it, as in the real register that shaped this plant kind: from 25 Sep the outlet reading is the same as the inlet reading on every row, and from 27 Sep the energy meter rises by exactly 3 on every row.",
+      "plantKind": "STP",
+      "fallbackDate": "2026-09-21",
+      "rows": [
+        {
+          "date": "2026-09-21",
+          "shift": null,
+          "time": null,
+          "operator": "Sunil",
+          "values": {
+            "inletTotaliser": 18468,
+            "outletTotaliser": 17112,
+            "runHours": 6,
+            "limeKg": 0.5,
+            "alumKg": 1,
+            "chlorineKg": 0.05,
+            "energyKwh": 91255,
+            "sludgeKg": 2
+          },
+          "cellMeta": {},
+          "remarks": null
+        },
+        {
+          "date": "2026-09-22",
+          "shift": null,
+          "time": null,
+          "operator": "Sunil",
+          "values": {
+            "inletTotaliser": 18478,
+            "outletTotaliser": 17121,
+            "runHours": 6,
+            "limeKg": null,
+            "alumKg": null,
+            "chlorineKg": null,
+            "energyKwh": 91264,
+            "sludgeKg": null
+          },
+          "cellMeta": {},
+          "remarks": null
+        },
+        {
+          "date": "2026-09-23",
+          "shift": null,
+          "time": null,
+          "operator": "Sunil",
+          "values": {
+            "inletTotaliser": 18486,
+            "outletTotaliser": 17127,
+            "runHours": 6,
+            "limeKg": null,
+            "alumKg": null,
+            "chlorineKg": null,
+            "energyKwh": 91277,
+            "sludgeKg": null
+          },
+          "cellMeta": {},
+          "remarks": null
+        },
+        {
+          "date": "2026-09-24",
+          "shift": null,
+          "time": null,
+          "operator": "Sunil",
+          "values": {
+            "inletTotaliser": 18493,
+            "outletTotaliser": 17133,
+            "runHours": 6,
+            "limeKg": 0.5,
+            "alumKg": 1,
+            "chlorineKg": 0.05,
+            "energyKwh": 91287,
+            "sludgeKg": null
+          },
+          "cellMeta": {},
+          "remarks": null
+        },
+        {
+          "date": "2026-09-25",
+          "shift": null,
+          "time": null,
+          "operator": "Sunil",
+          "values": {
+            "inletTotaliser": 18503,
+            "outletTotaliser": 18503,
+            "runHours": 7,
+            "limeKg": null,
+            "alumKg": null,
+            "chlorineKg": null,
+            "energyKwh": 91300,
+            "sludgeKg": null
+          },
+          "cellMeta": {},
+          "remarks": null
+        },
+        {
+          "date": "2026-09-26",
+          "shift": null,
+          "time": null,
+          "operator": "Sunil",
+          "values": {
+            "inletTotaliser": 18510,
+            "outletTotaliser": 18510,
+            "runHours": 6,
+            "limeKg": null,
+            "alumKg": null,
+            "chlorineKg": null,
+            "energyKwh": 91313,
+            "sludgeKg": null
+          },
+          "cellMeta": {},
+          "remarks": "pump serviced"
+        },
+        {
+          "date": "2026-09-27",
+          "shift": null,
+          "time": null,
+          "operator": "Sunil",
+          "values": {
+            "inletTotaliser": 18519,
+            "outletTotaliser": 18519,
+            "runHours": 6,
+            "limeKg": null,
+            "alumKg": null,
+            "chlorineKg": null,
+            "energyKwh": 91316,
+            "sludgeKg": null
+          },
+          "cellMeta": {},
+          "remarks": null
+        },
+        {
+          "date": "2026-09-28",
+          "shift": null,
+          "time": null,
+          "operator": "Sunil",
+          "values": {
+            "inletTotaliser": 18528,
+            "outletTotaliser": 18528,
+            "runHours": 6,
+            "limeKg": 1,
+            "alumKg": 1,
+            "chlorineKg": 0.05,
+            "energyKwh": 91319,
+            "sludgeKg": 2
+          },
+          "cellMeta": {},
+          "remarks": null
+        },
+        {
+          "date": "2026-09-29",
+          "shift": null,
+          "time": null,
+          "operator": "Sunil",
+          "values": {
+            "inletTotaliser": 18536,
+            "outletTotaliser": 18536,
+            "runHours": 6,
+            "limeKg": null,
+            "alumKg": null,
+            "chlorineKg": null,
+            "energyKwh": 91322,
+            "sludgeKg": null
+          },
+          "cellMeta": {},
+          "remarks": null
+        },
+        {
+          "date": "2026-09-30",
+          "shift": null,
+          "time": null,
+          "operator": "Sunil",
+          "values": {
+            "inletTotaliser": 18544,
+            "outletTotaliser": 18544,
+            "runHours": 6,
+            "limeKg": null,
+            "alumKg": null,
+            "chlorineKg": null,
+            "energyKwh": 91325,
+            "sludgeKg": null
+          },
+          "cellMeta": {},
+          "remarks": null
+        },
+        {
+          "date": "2026-10-01",
+          "shift": null,
+          "time": null,
+          "operator": "Sunil",
+          "values": {
+            "inletTotaliser": 18550,
+            "outletTotaliser": 18550,
+            "runHours": 7,
+            "limeKg": 0.5,
+            "alumKg": 1,
+            "chlorineKg": 0.05,
+            "energyKwh": 91328,
+            "sludgeKg": null
+          },
+          "cellMeta": {},
+          "remarks": null
+        },
+        {
+          "date": "2026-10-02",
+          "shift": null,
+          "time": null,
+          "operator": "Sunil",
+          "values": {
+            "inletTotaliser": 18557,
+            "outletTotaliser": 18557,
+            "runHours": 6,
+            "limeKg": null,
+            "alumKg": null,
+            "chlorineKg": null,
+            "energyKwh": 91331,
+            "sludgeKg": null
+          },
+          "cellMeta": {},
+          "remarks": null
+        },
+        {
+          "date": "2026-10-03",
+          "shift": null,
+          "time": null,
+          "operator": "Sunil",
+          "values": {
+            "inletTotaliser": 18566,
+            "outletTotaliser": 18566,
+            "runHours": 6,
+            "limeKg": null,
+            "alumKg": null,
+            "chlorineKg": null,
+            "energyKwh": 91334,
+            "sludgeKg": null
+          },
+          "cellMeta": {},
+          "remarks": null
+        },
+        {
+          "date": "2026-10-04",
+          "shift": null,
+          "time": null,
+          "operator": "Sunil",
+          "values": {
+            "inletTotaliser": 18576,
+            "outletTotaliser": 18576,
+            "runHours": 6,
+            "limeKg": null,
+            "alumKg": null,
+            "chlorineKg": null,
+            "energyKwh": 91337,
+            "sludgeKg": null
+          },
+          "cellMeta": {},
+          "remarks": null
+        }
+      ],
+      "plant": "daily"
+    }
+  ]
+}
