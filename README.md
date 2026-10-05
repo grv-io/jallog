@@ -4,7 +4,7 @@ JalLog reads a photo of a page from the paper logbook of a sewage or effluent tr
 
 - Live app: <https://jallog.vercel.app> (no login; live reading runs on a free model key with a small daily allowance)
 - Code: <https://github.com/grv-io/jallog>
-- Built for WCC Launchpad 30 (4–5 October 2026), track "Everyday Automation". Solo entry by Gaurav Agrawal.
+- Built for WCC Launchpad 30 (4–5 October 2026), track "Everyday Automation". Team: Gaurav Agrawal and Ritesh Kumar Singh.
 
 Contents: [The problem](#the-problem) · [What it does](#what-it-does) · [The checks](#the-checks) · [Measured reading accuracy](#measured-reading-accuracy) · [Try it](#try-it) · [How it is built](#how-it-is-built) · [Responsible design](#responsible-design) · [Known limits](#known-limits) · [What is not built](#what-is-not-built) · [Field notes](#field-notes-to-be-added-by-the-entrant) · [Disclosure](#disclosure)
 
